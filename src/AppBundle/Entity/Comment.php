@@ -36,7 +36,6 @@ class Comment {
     */
     private $article;
 
-
     /**
     * @ORM\Column(type="text")
     **/
