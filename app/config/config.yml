@@ -81,3 +81,10 @@ fos_user:
     from_email:
         address: "civodul.teros@gmail.com"
         sender_name: "Admin"
+
+framework:
+    translator: ~
+
+twig:
+    globals:
+        fos_csrf_provider: "@security.csrf.token_manager"
