@@ -3,6 +3,8 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
 
 
 /**
@@ -10,6 +12,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * @ORM\Table(name="article")
  */
 class Article {
+    use TimestampableEntity;
 
     /**
     * @ORM\Column(type="integer")
@@ -17,11 +20,6 @@ class Article {
     * @ORM\GeneratedValue(strategy="AUTO")
     */
     private $id;
-
-    /**
-    * @ORM\Column(type="datetime", name="posted_at")
-    **/
-    private $postDate;
 
     /**
     * @ORM\ManyToOne(targetEntity="User", inversedBy="articles")
@@ -82,30 +80,6 @@ class Article {
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set postDate
-     *
-     * @param \DateTime $postDate
-     *
-     * @return Article
-     */
-    public function setPostDate($postDate)
-    {
-        $this->postDate = $postDate;
-
-        return $this;
-    }
-
-    /**
-     * Get postDate
-     *
-     * @return \DateTime
-     */
-    public function getPostDate()
-    {
-        return $this->postDate;
     }
 
     /**
@@ -295,4 +269,14 @@ class Article {
     {
         return $this->userLikes;
     }
+
+    public function getCommentsCount()
+    {
+        return $this->comments->count();
+    }
+    public function getLikesCount()
+    {
+        return $this->likes->count();
+    }
+
 }

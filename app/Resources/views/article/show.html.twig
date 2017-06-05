@@ -10,10 +10,6 @@
                 <td>{{ article.id }}</td>
             </tr>
             <tr>
-                <th>Postdate</th>
-                <td>{% if article.postDate %}{{ article.postDate|date('Y-m-d H:i:s') }}{% endif %}</td>
-            </tr>
-            <tr>
                 <th>Published</th>
                 <td>{% if article.published %}Yes{% else %}No{% endif %}</td>
             </tr>
@@ -24,6 +20,14 @@
             <tr>
                 <th>Content</th>
                 <td>{{ article.content }}</td>
+            </tr>
+            <tr>
+                <th>Createdat</th>
+                <td>{% if article.createdAt %}{{ article.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{% if article.updatedAt %}{{ article.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
         </tbody>
     </table>

@@ -84,6 +84,17 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 }
                 not_article_index:
 
+                // published_article_index
+                if ('/article/' === $pathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_published_article_index;
+                    }
+
+                    return array (  '_controller' => 'AppBundle\\Controller\\ArticleController::publishedAction',  '_route' => 'published_article_index',);
+                }
+                not_published_article_index:
+
                 // article_new
                 if ('/article/new' === $pathinfo) {
                     if (!in_array($canonicalMethod, array('GET', 'POST'))) {
@@ -327,13 +338,15 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         // homepage
-        if ('' === $trimmedPathinfo) {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'homepage');
+        if ('/' === $pathinfo) {
+            if ('GET' !== $canonicalMethod) {
+                $allow[] = 'GET';
+                goto not_homepage;
             }
 
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::homePageAction',  '_route' => 'homepage',);
         }
+        not_homepage:
 
         if (0 === strpos($pathinfo, '/user')) {
             // user_index

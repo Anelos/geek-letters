@@ -5,7 +5,8 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Comment;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Comment controller.
@@ -44,11 +45,13 @@ class CommentController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $userId = $this->getUser();
+            $comment->setUser($userId);
             $em = $this->getDoctrine()->getManager();
             $em->persist($comment);
             $em->flush();
 
-            return $this->redirectToRoute('comment_show', array('id' => $comment->getId()));
+            return $this->redirectToRoute('homepage');
         }
 
         return $this->render('comment/new.html.twig', array(

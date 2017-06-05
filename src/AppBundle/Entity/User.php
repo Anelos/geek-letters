@@ -69,7 +69,7 @@ class User extends BaseUser {
 
     public function __toString()
     {
-        return $this->userName;
+        return $this->username;
     }
 
 

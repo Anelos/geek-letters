@@ -10,12 +10,16 @@
                 <td>{{ comment.id }}</td>
             </tr>
             <tr>
-                <th>Postdate</th>
-                <td>{% if comment.postDate %}{{ comment.postDate|date('Y-m-d H:i:s') }}{% endif %}</td>
-            </tr>
-            <tr>
                 <th>Content</th>
                 <td>{{ comment.content }}</td>
+            </tr>
+            <tr>
+                <th>Createdat</th>
+                <td>{% if comment.createdAt %}{{ comment.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{% if comment.updatedAt %}{{ comment.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
         </tbody>
     </table>

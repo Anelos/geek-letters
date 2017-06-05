@@ -13,7 +13,7 @@ class ArticleType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('postDate')->add('published')->add('title')->add('content')->add('user')->add('category')->add('userLikes');
+        $builder->add('published')->add('title')->add('content')->add('category');
     }
     
     /**

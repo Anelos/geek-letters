@@ -7,75 +7,70 @@ class __TwigTemplate_5dbd67c2d846a8be32b925a8735e86c866b7d874ceb3b7a25a8098ae9cf
     {
         parent::__construct($env);
 
-        // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", ":comment:new.html.twig", 1);
+        $this->parent = false;
+
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
     }
 
-    protected function doGetParent(array $context)
-    {
-        return "base.html.twig";
-    }
-
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_05caa97adb4c1f123fe410061dd70c4e03411e1ec38b2bedc8839e43e247dc6c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_05caa97adb4c1f123fe410061dd70c4e03411e1ec38b2bedc8839e43e247dc6c->enter($__internal_05caa97adb4c1f123fe410061dd70c4e03411e1ec38b2bedc8839e43e247dc6c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":comment:new.html.twig"));
+        $__internal_cd3240e08a778a2d00a39bc714ae8bfbdf5aedc2cc5a76457179213b90d19991 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_cd3240e08a778a2d00a39bc714ae8bfbdf5aedc2cc5a76457179213b90d19991->enter($__internal_cd3240e08a778a2d00a39bc714ae8bfbdf5aedc2cc5a76457179213b90d19991_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":comment:new.html.twig"));
 
-        $__internal_d058b4cf1c71dea75d735523a6947e19ecbfe079fe6ad8d9da27d05e615e1b39 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d058b4cf1c71dea75d735523a6947e19ecbfe079fe6ad8d9da27d05e615e1b39->enter($__internal_d058b4cf1c71dea75d735523a6947e19ecbfe079fe6ad8d9da27d05e615e1b39_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":comment:new.html.twig"));
+        $__internal_4cf4a85b9efcfba39acced90b7bea69948f7108ef2cbd2cba19a6497517c7b45 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4cf4a85b9efcfba39acced90b7bea69948f7108ef2cbd2cba19a6497517c7b45->enter($__internal_4cf4a85b9efcfba39acced90b7bea69948f7108ef2cbd2cba19a6497517c7b45_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":comment:new.html.twig"));
 
-        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        // line 1
+        $this->displayBlock('body', $context, $blocks);
         
-        $__internal_05caa97adb4c1f123fe410061dd70c4e03411e1ec38b2bedc8839e43e247dc6c->leave($__internal_05caa97adb4c1f123fe410061dd70c4e03411e1ec38b2bedc8839e43e247dc6c_prof);
+        $__internal_cd3240e08a778a2d00a39bc714ae8bfbdf5aedc2cc5a76457179213b90d19991->leave($__internal_cd3240e08a778a2d00a39bc714ae8bfbdf5aedc2cc5a76457179213b90d19991_prof);
 
         
-        $__internal_d058b4cf1c71dea75d735523a6947e19ecbfe079fe6ad8d9da27d05e615e1b39->leave($__internal_d058b4cf1c71dea75d735523a6947e19ecbfe079fe6ad8d9da27d05e615e1b39_prof);
+        $__internal_4cf4a85b9efcfba39acced90b7bea69948f7108ef2cbd2cba19a6497517c7b45->leave($__internal_4cf4a85b9efcfba39acced90b7bea69948f7108ef2cbd2cba19a6497517c7b45_prof);
 
     }
 
-    // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_eda265ea40da8a11a1073a6b3545f662a3db7e993e51e68134d30e587628d403 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_eda265ea40da8a11a1073a6b3545f662a3db7e993e51e68134d30e587628d403->enter($__internal_eda265ea40da8a11a1073a6b3545f662a3db7e993e51e68134d30e587628d403_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_9234c4be762bb7ffbae2308ce3b77953efe576c152343a238189bbba3f71d02f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_9234c4be762bb7ffbae2308ce3b77953efe576c152343a238189bbba3f71d02f->enter($__internal_9234c4be762bb7ffbae2308ce3b77953efe576c152343a238189bbba3f71d02f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_b519bfddc7b5917b3e02f0739f7edb722d82537dac2cda7c99fc30a960232bac = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b519bfddc7b5917b3e02f0739f7edb722d82537dac2cda7c99fc30a960232bac->enter($__internal_b519bfddc7b5917b3e02f0739f7edb722d82537dac2cda7c99fc30a960232bac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_96ab09e005d3b588818c45f6d033bce9dbe5da6ffe6dce2bee45ed7ba6061bca = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_96ab09e005d3b588818c45f6d033bce9dbe5da6ffe6dce2bee45ed7ba6061bca->enter($__internal_96ab09e005d3b588818c45f6d033bce9dbe5da6ffe6dce2bee45ed7ba6061bca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 4
+        // line 2
         echo "    <h1>Comment creation</h1>
 
     ";
-        // line 6
+        // line 4
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start');
         echo "
         ";
-        // line 7
+        // line 5
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock(($context["form"] ?? $this->getContext($context, "form")), 'widget');
         echo "
         <input type=\"submit\" value=\"Create\" />
     ";
-        // line 9
+        // line 7
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
         echo "
 
     <ul>
         <li>
             <a href=\"";
-        // line 13
+        // line 11
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("comment_index");
         echo "\">Back to the list</a>
         </li>
     </ul>
 ";
         
-        $__internal_b519bfddc7b5917b3e02f0739f7edb722d82537dac2cda7c99fc30a960232bac->leave($__internal_b519bfddc7b5917b3e02f0739f7edb722d82537dac2cda7c99fc30a960232bac_prof);
+        $__internal_96ab09e005d3b588818c45f6d033bce9dbe5da6ffe6dce2bee45ed7ba6061bca->leave($__internal_96ab09e005d3b588818c45f6d033bce9dbe5da6ffe6dce2bee45ed7ba6061bca_prof);
 
         
-        $__internal_eda265ea40da8a11a1073a6b3545f662a3db7e993e51e68134d30e587628d403->leave($__internal_eda265ea40da8a11a1073a6b3545f662a3db7e993e51e68134d30e587628d403_prof);
+        $__internal_9234c4be762bb7ffbae2308ce3b77953efe576c152343a238189bbba3f71d02f->leave($__internal_9234c4be762bb7ffbae2308ce3b77953efe576c152343a238189bbba3f71d02f_prof);
 
     }
 
@@ -84,14 +79,9 @@ class __TwigTemplate_5dbd67c2d846a8be32b925a8735e86c866b7d874ceb3b7a25a8098ae9cf
         return ":comment:new.html.twig";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  69 => 13,  62 => 9,  57 => 7,  53 => 6,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  64 => 11,  57 => 7,  52 => 5,  48 => 4,  44 => 2,  26 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -104,9 +94,7 @@ class __TwigTemplate_5dbd67c2d846a8be32b925a8735e86c866b7d874ceb3b7a25a8098ae9cf
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% extends 'base.html.twig' %}
-
-{% block body %}
+        return new Twig_Source("{% block body %}
     <h1>Comment creation</h1>
 
     {{ form_start(form) }}

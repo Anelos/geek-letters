@@ -149,6 +149,7 @@
   ':category:new.html.twig' => __DIR__.'/../../../app/Resources/views/category/new.html.twig',
   ':category:show.html.twig' => __DIR__.'/../../../app/Resources/views/category/show.html.twig',
   ':category:index.html.twig' => __DIR__.'/../../../app/Resources/views/category/index.html.twig',
+  ':admin:admin.html.twig' => __DIR__.'/../../../app/Resources/views/admin/admin.html.twig',
   ':includes:navbar.html.twig' => __DIR__.'/../../../app/Resources/views/includes/navbar.html.twig',
   ':comment:edit.html.twig' => __DIR__.'/../../../app/Resources/views/comment/edit.html.twig',
   ':comment:new.html.twig' => __DIR__.'/../../../app/Resources/views/comment/new.html.twig',

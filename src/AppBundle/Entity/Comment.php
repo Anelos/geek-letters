@@ -1,14 +1,15 @@
 <?php
 namespace AppBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="comment")
  */
 class Comment {
-
+    use TimestampableEntity;
     /**
     * @ORM\Column(type="integer")
     * @ORM\Id
@@ -17,35 +18,25 @@ class Comment {
     private $id;
 
     /**
-    * @ORM\Column(type="datetime", name="posted_at")
-    **/
-    private $postDate;
-
-    /**
     * Many Comments have One Author.
     * @ORM\ManyToOne(targetEntity="User", inversedBy="comments")
     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
     */
     private $user;
-
     /**
     * Many Comments have One Article.
     * @ORM\ManyToOne(targetEntity="Article", inversedBy="comments")
     * @ORM\JoinColumn(name="article_id", referencedColumnName="id")
     */
     private $article;
-
     /**
     * @ORM\Column(type="text")
     **/
     private $content;
-
-
     public function __toString()
     {
         return $this->content;
     }
-
 
     /**
      * Get id
@@ -55,30 +46,6 @@ class Comment {
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set postDate
-     *
-     * @param \DateTime $postDate
-     *
-     * @return Comment
-     */
-    public function setPostDate($postDate)
-    {
-        $this->postDate = $postDate;
-
-        return $this;
-    }
-
-    /**
-     * Get postDate
-     *
-     * @return \DateTime
-     */
-    public function getPostDate()
-    {
-        return $this->postDate;
     }
 
     /**
