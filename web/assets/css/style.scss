@@ -1,0 +1,101 @@
+body , *{
+  margin:0;
+  padding: 0;
+}
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+@font-face {
+    font-family: 'geek';
+    src: url('../fonts/OptimusPrinceps.ttf');
+}
+.navbar{
+  margin:0;
+  border-radius: 0;
+  background-color: rgb(4,1,20);
+}
+.row{
+  margin: 0;
+  padding: 0;
+}
+.container-fluid{
+  margin: 0;
+  padding: 0;
+}
+.header{
+  font-family: "geek";
+  width: 100%;
+  height: 400px;
+  color:white;
+  background:{
+    image:url("../img/pacman.jpg");
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+  h3{
+    margin-top: 2%;
+  }
+  text-align: center;
+}
+.main{
+  h1{
+    max-width: 25%;
+    border-bottom: 1px solid black;
+  }
+}
+.footer{
+  width: 100%;
+  height:40px;
+  background-color: black;
+  color:white;
+  text-align: center;
+  a{
+    color: white;
+  }
+  li{
+    display: inline-block;
+    margin-top: 10px;
+  }
+}
+.well{
+  width: 50%;
+  margin-bottom: 0px;
+}
+.comments{
+  margin-bottom: 3%;
+}
+.btn{
+  animation-name: example;
+    animation-duration: 4s;
+}
+.line-1{
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+.article{
+  margin-top: 4%;
+}
