@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 
+
 /**
  * Comment controller.
  *
@@ -47,6 +48,7 @@ class CommentController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $userId = $this->getUser();
             $comment->setUser($userId);
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($comment);
             $em->flush();

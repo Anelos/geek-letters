@@ -20,18 +20,17 @@
             <div class="collapse" id="collapse{{ article.id }}">
                 <div class="well comments">
                     {% if is_granted("ROLE_USER") %}
-                        <form name="appbundle_comment" method="post" action="/comment/new">
+                        <form name="appbundle_comment" method="post" action={{ path('comment_new') }}>
                             <div id="appbundle_comment">
                                 <div>
                                     <label for="appbundle_comment_content" class="required">Content</label>
                                     <textarea id="appbundle_comment_content" name="appbundle_comment[content]" required="required"></textarea>
-                                 </div>
-                                <div>
-                                <label for="appbundle_comment_article">Article</label>
-                                <input  type="hidden" id="appbundle_comment_article" name="appbundle_comment[article]" value="{{ article.id }}">
                                 </div>
-                            <input type="hidden" id="appbundle_comment__token" name="appbundle_comment[_token]" value="WhvMZqhkkJRvAxR4I9uX1WC4wnPrbLRxrhbks-jU_MY">
-                            </div>
+                                <div>
+                                    <label for="appbundle_comment_article">Article</label>
+                                    <input type="hidden" id="appbundle_comment_article" name="appbundle_comment[article]" value="{{ article.id }}">
+                                </div>
+                                <input type="hidden" id="appbundle_comment__token" name="appbundle_comment[_token]" value="ZyE30fEeQShYRuH6M_uqqayVK8rtkSt_sW5W19sAXVQ"></div>
                             <input type="submit" value="Create">
                         </form>
                     {% else %}
