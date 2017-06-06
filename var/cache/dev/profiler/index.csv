@@ -21,3 +21,12 @@ ece9c5,127.0.0.1,GET,http://localhost:8000/,1496734740,,200
 b6ae93,127.0.0.1,GET,http://localhost:8000/,1496734770,,200
 5f583e,127.0.0.1,GET,http://localhost:8000/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DAppBundle%253AArticle%253Aindex,1496734922,fc513e,200
 fc513e,127.0.0.1,GET,http://localhost:8000/,1496734922,,200
+9821c5,127.0.0.1,GET,http://127.0.0.1:8000/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DFOSUserBundle%253ASecurity%253Alogin,1496737601,991110,200
+dc6f38,127.0.0.1,GET,http://127.0.0.1:8000/,1496737601,991110,200
+991110,127.0.0.1,GET,http://127.0.0.1:8000/,1496737601,,500
+e248e0,127.0.0.1,GET,http://127.0.0.1:8000/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DFOSUserBundle%253ASecurity%253Alogin,1496737635,d49df9,200
+8e2253,127.0.0.1,GET,http://127.0.0.1:8000/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DAppBundle%253AArticle%253Apublished,1496737635,d49df9,200
+d49df9,127.0.0.1,GET,http://127.0.0.1:8000/,1496737635,,200
+18ab34,127.0.0.1,POST,http://127.0.0.1:8000/login_check,1496737648,,302
+31b10b,127.0.0.1,GET,http://127.0.0.1:8000/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DAppBundle%253AArticle%253Aindex,1496737648,f5c509,200
+f5c509,127.0.0.1,GET,http://127.0.0.1:8000/,1496737648,,200
