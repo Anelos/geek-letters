@@ -1,15 +1,15 @@
 {% block body %}
         {% for article in articles %}
-        <div class='row'>
+        <div class='row article'>
             <div class= "well">
                 <h3>{{ article.title }}</h3>
                 {% if article.published !=1 %}
                 <p><span>Not Published Yet</span></p>
                 {% endif %}
-                <p>{{ article.category }}
+                <p>Categorie : {{ article.category }}
                 <p>{{ article.content }}</p>
-                <p>created at: {{ article.createdAt|date('d-m-Y') }} {% if article.updatedAt != article.createdAt %}Edited {% endif %}</p>
-                <p>by : {{ article.user.username }}</p>
+                <p>created at: {{ article.createdAt|date('d-m-Y') }} {% if article.updatedAt != article.createdAt %}Edited {% endif %}
+                by : {{ article.user.username }}</p>
                 {% if is_granted("ROLE_SUPER_ADMIN") %}
                 <a href="{{ path('article_edit', { 'id': article.id }) }}">edit</a>
                 {% endif %}
