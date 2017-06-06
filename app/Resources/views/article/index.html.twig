@@ -1,6 +1,10 @@
 {% block body %}
-        {% for article in articles %}
-        <div class='row article'>
+    {% for article in articles %}
+    {% if article.published !=1 %}
+        <div class='row article notPubished'>
+    {% else %}
+        <div class='row article '>
+    {% endif %}
             <div class= "well">
                 <h3>{{ article.title }}</h3>
                 {% if article.published !=1 %}

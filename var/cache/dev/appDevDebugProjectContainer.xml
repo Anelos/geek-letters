@@ -120,13 +120,14 @@
     <parameter key="mailer_user">null</parameter>
     <parameter key="mailer_password">null</parameter>
     <parameter key="secret">ThisTokenIsNotSoSecretChangeIt</parameter>
-    <parameter key="locale">en</parameter>
+    <parameter key="locale">en*</parameter>
+    <parameter key="avatars_directory">/var/www/html/geek-letters/web/uploads/avatars</parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
     <parameter key="fragment.path">/_fragment</parameter>
     <parameter key="kernel.secret">ThisTokenIsNotSoSecretChangeIt</parameter>
     <parameter key="kernel.http_method_override">true</parameter>
     <parameter key="kernel.trusted_hosts" type="collection"/>
-    <parameter key="kernel.default_locale">en</parameter>
+    <parameter key="kernel.default_locale">en*</parameter>
     <parameter key="templating.helper.code.file_link_format">null</parameter>
     <parameter key="debug.file_link_format">null</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
@@ -625,7 +626,7 @@
     <service id="locale_listener" class="Symfony\Component\HttpKernel\EventListener\LocaleListener">
       <tag name="kernel.event_subscriber"/>
       <argument type="service" id="request_stack"/>
-      <argument>en</argument>
+      <argument>en*</argument>
       <argument type="service" id="router.default" on-invalid="ignore"/>
     </service>
     <service id="validate_request_listener" class="Symfony\Component\HttpKernel\EventListener\ValidateRequestListener">
@@ -747,7 +748,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>9EiaFRdaJ4yoTn7Ab9qU-V</argument>
+      <argument>xWQyFPzqU1NnEoeBG5I8TN</argument>
       <argument>/var/www/html/geek-letters/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -757,7 +758,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>9EiaFRdaJ4yoTn7Ab9qU-V</argument>
+      <argument>xWQyFPzqU1NnEoeBG5I8TN</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -2406,12 +2407,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>59370885af5026.47378876</argument>
+      <argument>59371ac60b94e3.44016114</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>59370885af5026.47378876</argument>
+      <argument>59371ac60b94e3.44016114</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -4587,7 +4588,7 @@
     <service id="cache.system.recorder.inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>xUIuhYPJEF</argument>
       <argument>0</argument>
-      <argument>9EiaFRdaJ4yoTn7Ab9qU-V</argument>
+      <argument>xWQyFPzqU1NnEoeBG5I8TN</argument>
       <argument>/var/www/html/geek-letters/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4595,7 +4596,7 @@
     <service id="cache.validator.recorder.inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>Las2jKfCr5</argument>
       <argument>0</argument>
-      <argument>9EiaFRdaJ4yoTn7Ab9qU-V</argument>
+      <argument>xWQyFPzqU1NnEoeBG5I8TN</argument>
       <argument>/var/www/html/geek-letters/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4603,7 +4604,7 @@
     <service id="cache.serializer.recorder.inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>XKwxcFeiZu</argument>
       <argument>0</argument>
-      <argument>9EiaFRdaJ4yoTn7Ab9qU-V</argument>
+      <argument>xWQyFPzqU1NnEoeBG5I8TN</argument>
       <argument>/var/www/html/geek-letters/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4611,7 +4612,7 @@
     <service id="cache.annotations.recorder.inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>r0jfJBpvQc</argument>
       <argument>0</argument>
-      <argument>9EiaFRdaJ4yoTn7Ab9qU-V</argument>
+      <argument>xWQyFPzqU1NnEoeBG5I8TN</argument>
       <argument>/var/www/html/geek-letters/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
