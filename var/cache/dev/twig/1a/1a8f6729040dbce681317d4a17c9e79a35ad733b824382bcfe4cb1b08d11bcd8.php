@@ -15,11 +15,11 @@ class __TwigTemplate_0c5703e5b28c5461143000f4eb840ec85d4c1aa78813dfe0d0dd83c9bcc
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3b56eaba164bb924b8adbd6be2c45d14e272278403e89edb205fc12c503a8592 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_3b56eaba164bb924b8adbd6be2c45d14e272278403e89edb205fc12c503a8592->enter($__internal_3b56eaba164bb924b8adbd6be2c45d14e272278403e89edb205fc12c503a8592_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:search.html.twig"));
+        $__internal_65a20816158a381f06a037a108d92e5e375060c8dbe56490a0b3664ffc7d36f3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_65a20816158a381f06a037a108d92e5e375060c8dbe56490a0b3664ffc7d36f3->enter($__internal_65a20816158a381f06a037a108d92e5e375060c8dbe56490a0b3664ffc7d36f3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:search.html.twig"));
 
-        $__internal_60b28083ed35358d73f66756ebc8b7e571a0b22a485c4c96e4178cb5e8695fc6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_60b28083ed35358d73f66756ebc8b7e571a0b22a485c4c96e4178cb5e8695fc6->enter($__internal_60b28083ed35358d73f66756ebc8b7e571a0b22a485c4c96e4178cb5e8695fc6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:search.html.twig"));
+        $__internal_1daf474d519a4eb60d74b7d38af17f15d6cb10ea53f678586a8aaab44df2fc78 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1daf474d519a4eb60d74b7d38af17f15d6cb10ea53f678586a8aaab44df2fc78->enter($__internal_1daf474d519a4eb60d74b7d38af17f15d6cb10ea53f678586a8aaab44df2fc78_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:search.html.twig"));
 
         // line 1
         echo "<div id=\"sidebar-search\" class=\"hidden\">
@@ -129,10 +129,10 @@ class __TwigTemplate_0c5703e5b28c5461143000f4eb840ec85d4c1aa78813dfe0d0dd83c9bcc
 </div>
 ";
         
-        $__internal_3b56eaba164bb924b8adbd6be2c45d14e272278403e89edb205fc12c503a8592->leave($__internal_3b56eaba164bb924b8adbd6be2c45d14e272278403e89edb205fc12c503a8592_prof);
+        $__internal_65a20816158a381f06a037a108d92e5e375060c8dbe56490a0b3664ffc7d36f3->leave($__internal_65a20816158a381f06a037a108d92e5e375060c8dbe56490a0b3664ffc7d36f3_prof);
 
         
-        $__internal_60b28083ed35358d73f66756ebc8b7e571a0b22a485c4c96e4178cb5e8695fc6->leave($__internal_60b28083ed35358d73f66756ebc8b7e571a0b22a485c4c96e4178cb5e8695fc6_prof);
+        $__internal_1daf474d519a4eb60d74b7d38af17f15d6cb10ea53f678586a8aaab44df2fc78->leave($__internal_1daf474d519a4eb60d74b7d38af17f15d6cb10ea53f678586a8aaab44df2fc78_prof);
 
     }
 

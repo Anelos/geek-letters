@@ -4,9 +4,42 @@
 
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-              {{ render(controller(
-        'AppBundle:Article:published'
-        )) }}
+                {% if is_granted("ROLE_SUPER_ADMIN") %}
+                <form name="appbundle_article" method="post">
+                    <div id="appbundle_article">
+                        <div>
+                            <label for="appbundle_article_published">Published</label><input type="checkbox" id="appbundle_article_published"
+                                name="appbundle_article[published]" value="1">
+                        </div>
+                        <div>
+                            <label for="appbundle_article_title" class="required">Title</label>
+                            <input type="text" id="appbundle_article_title" name="appbundle_article[title]" required="required" maxlength="100">
+                        </div>
+                        <div>
+                            <label for="appbundle_article_content" class="required">Content</label>
+                            <textarea id="appbundle_article_content" name="appbundle_article[content]" required="required" rows="5" cols="50"></textarea>
+                        </div>
+                        <div>
+                            <label for="appbundle_article_category">Category</label>
+                            <select id="appbundle_article_category" name="appbundle_article[category]">
+                                <option value=""></option>
+                                <option value="1">Video Game</option>
+                                <option value="2">Music</option>
+                                <option value="3">Movie</option>
+                                <option value="4">Technlology</option>
+                                <option value="5">Comic</option>
+                                <option value="6">Manga</option>
+                                <option value="7">Science</option>
+                            </select>
+                        </div>
+                        <input type="hidden" id="appbundle_article__token" name="appbundle_article[_token]" value="VjzG2S-znG9v3JYR9QumaiMCsku_wz6E6fyB6ZbGKAQ">
+                    </div>
+                    <input type="submit" value="Create">
+                </form>
+                    {{ render(controller( 'AppBundle:Article:index' )) }}
+                {% else %} 
+                    {{ render(controller( 'AppBundle:Article:published' )) }}
+                {% endif %} 
             </div>
             <div class="col-md-3">
             </div>
