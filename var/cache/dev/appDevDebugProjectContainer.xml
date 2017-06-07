@@ -19,7 +19,6 @@
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
       <parameter key="AsseticBundle">Symfony\Bundle\AsseticBundle\AsseticBundle</parameter>
-      <parameter key="StofDoctrineExtensionsBundle">Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -77,11 +76,6 @@
         <parameter key="path">/var/www/html/geek-letters/vendor/symfony/assetic-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\AsseticBundle</parameter>
       </parameter>
-      <parameter key="StofDoctrineExtensionsBundle" type="collection">
-        <parameter key="parent">null</parameter>
-        <parameter key="path">/var/www/html/geek-letters/vendor/stof/doctrine-extensions-bundle</parameter>
-        <parameter key="namespace">Stof\DoctrineExtensionsBundle</parameter>
-      </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
         <parameter key="path">/var/www/html/geek-letters/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle</parameter>
@@ -112,9 +106,9 @@
     <parameter key="kernel.container_class">appDevDebugProjectContainer</parameter>
     <parameter key="database_host">127.0.0.1</parameter>
     <parameter key="database_port">null</parameter>
-    <parameter key="database_name">geek_letters</parameter>
+    <parameter key="database_name">symfony</parameter>
     <parameter key="database_user">root</parameter>
-    <parameter key="database_password">angelus</parameter>
+    <parameter key="database_password">null</parameter>
     <parameter key="mailer_transport">smtp</parameter>
     <parameter key="mailer_host">127.0.0.1</parameter>
     <parameter key="mailer_user">null</parameter>
@@ -426,7 +420,6 @@
       <parameter>AppBundle</parameter>
       <parameter>FOSUserBundle</parameter>
       <parameter>AsseticBundle</parameter>
-      <parameter>StofDoctrineExtensionsBundle</parameter>
       <parameter>DebugBundle</parameter>
       <parameter>WebProfilerBundle</parameter>
       <parameter>SensioDistributionBundle</parameter>
@@ -456,28 +449,6 @@
     <parameter key="assetic.cache.class">Assetic\Cache\FilesystemCache</parameter>
     <parameter key="assetic.use_controller_worker.class">Symfony\Bundle\AsseticBundle\Factory\Worker\UseControllerWorker</parameter>
     <parameter key="assetic.request_listener.class">Symfony\Bundle\AsseticBundle\EventListener\RequestListener</parameter>
-    <parameter key="stof_doctrine_extensions.event_listener.locale.class">Stof\DoctrineExtensionsBundle\EventListener\LocaleListener</parameter>
-    <parameter key="stof_doctrine_extensions.event_listener.logger.class">Stof\DoctrineExtensionsBundle\EventListener\LoggerListener</parameter>
-    <parameter key="stof_doctrine_extensions.event_listener.blame.class">Stof\DoctrineExtensionsBundle\EventListener\BlameListener</parameter>
-    <parameter key="stof_doctrine_extensions.uploadable.manager.class">Stof\DoctrineExtensionsBundle\Uploadable\UploadableManager</parameter>
-    <parameter key="stof_doctrine_extensions.uploadable.mime_type_guesser.class">Stof\DoctrineExtensionsBundle\Uploadable\MimeTypeGuesserAdapter</parameter>
-    <parameter key="stof_doctrine_extensions.uploadable.default_file_info.class">Stof\DoctrineExtensionsBundle\Uploadable\UploadedFileInfo</parameter>
-    <parameter key="stof_doctrine_extensions.default_locale">fr_FR</parameter>
-    <parameter key="stof_doctrine_extensions.default_file_path">null</parameter>
-    <parameter key="stof_doctrine_extensions.translation_fallback">false</parameter>
-    <parameter key="stof_doctrine_extensions.persist_default_translation">false</parameter>
-    <parameter key="stof_doctrine_extensions.skip_translation_on_load">false</parameter>
-    <parameter key="stof_doctrine_extensions.uploadable.validate_writable_directory">true</parameter>
-    <parameter key="stof_doctrine_extensions.listener.translatable.class">Gedmo\Translatable\TranslatableListener</parameter>
-    <parameter key="stof_doctrine_extensions.listener.timestampable.class">Gedmo\Timestampable\TimestampableListener</parameter>
-    <parameter key="stof_doctrine_extensions.listener.blameable.class">Gedmo\Blameable\BlameableListener</parameter>
-    <parameter key="stof_doctrine_extensions.listener.sluggable.class">Gedmo\Sluggable\SluggableListener</parameter>
-    <parameter key="stof_doctrine_extensions.listener.tree.class">Gedmo\Tree\TreeListener</parameter>
-    <parameter key="stof_doctrine_extensions.listener.loggable.class">Gedmo\Loggable\LoggableListener</parameter>
-    <parameter key="stof_doctrine_extensions.listener.sortable.class">Gedmo\Sortable\SortableListener</parameter>
-    <parameter key="stof_doctrine_extensions.listener.softdeleteable.class">Gedmo\SoftDeleteable\SoftDeleteableListener</parameter>
-    <parameter key="stof_doctrine_extensions.listener.uploadable.class">Gedmo\Uploadable\UploadableListener</parameter>
-    <parameter key="stof_doctrine_extensions.listener.reference_integrity.class">Gedmo\ReferenceIntegrity\ReferenceIntegrityListener</parameter>
     <parameter key="web_profiler.debug_toolbar.position">bottom</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
@@ -559,37 +530,9 @@
   <services>
     <service id="service_container" class="Symfony\Component\DependencyInjection\ContainerInterface" synthetic="true"/>
     <service id="AppBundle\AppBundle" class="AppBundle\AppBundle" public="false" autowire="true" autoconfigure="true"/>
-    <service id="AppBundle\Controller\ArticleController" class="AppBundle\Controller\ArticleController" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="controller.service_arguments"/>
-    </service>
-    <service id="AppBundle\Controller\CategoryController" class="AppBundle\Controller\CategoryController" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="controller.service_arguments"/>
-    </service>
-    <service id="AppBundle\Controller\CommentController" class="AppBundle\Controller\CommentController" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="controller.service_arguments"/>
-    </service>
     <service id="AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="controller.service_arguments"/>
-    </service>
-    <service id="AppBundle\Controller\UserController" class="AppBundle\Controller\UserController" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="controller.service_arguments"/>
-    </service>
-    <service id="AppBundle\Form\ArticleType" class="AppBundle\Form\ArticleType" public="false" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="AppBundle\Form\CategoryType" class="AppBundle\Form\CategoryType" public="false" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="AppBundle\Form\CommentType" class="AppBundle\Form\CommentType" public="false" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="AppBundle\Form\UserType" class="AppBundle\Form\UserType" public="false" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
     </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
@@ -607,7 +550,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.594c149ffb180647b64e58ba78895037"/>
+      <argument type="service" id="service_locator.ebdaf59977bc26dc6a191d4f5f8254cb"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -747,7 +690,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>nw5tbQ+0mfxmpE3TLJAepK</argument>
+      <argument>fybhUJkVehot3RZt5YM3EN</argument>
       <argument>/var/www/html/geek-letters/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -757,7 +700,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>nw5tbQ+0mfxmpE3TLJAepK</argument>
+      <argument>fybhUJkVehot3RZt5YM3EN</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -876,7 +819,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.d3751e28ed876ad171cd8f1ba26dd672"/>
+      <argument type="service" id="service_locator.61ce42ee314d3459d7339b36d3fecf2a"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -2329,8 +2272,8 @@
       <argument type="collection"/>
       <call method="setOptions">
         <argument type="collection">
-          <argument key="default_target_path">/</argument>
           <argument key="always_use_default_target_path">false</argument>
+          <argument key="default_target_path">/</argument>
           <argument key="login_path">/login</argument>
           <argument key="target_path_parameter">_target_path</argument>
           <argument key="use_referer">false</argument>
@@ -2385,12 +2328,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5937b5aa4f39c8.92676318</argument>
+      <argument>5937b8474204d8.60622749</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5937b5aa4f39c8.92676318</argument>
+      <argument>5937b8474204d8.60622749</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -2586,10 +2529,6 @@
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/var/www/html/geek-letters/app/Resources/FOSUserBundle/views</argument>
-        <argument>FOSUser</argument>
-      </call>
-      <call method="addPath">
         <argument>/var/www/html/geek-letters/vendor/friendsofsymfony/user-bundle/Resources/views</argument>
         <argument>FOSUser</argument>
       </call>
@@ -2734,10 +2673,6 @@
       <call method="addPath">
         <argument>/var/www/html/geek-letters/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
-      </call>
-      <call method="addPath">
-        <argument>/var/www/html/geek-letters/app/Resources/FOSUserBundle/views</argument>
-        <argument>FOSUser</argument>
       </call>
       <call method="addPath">
         <argument>/var/www/html/geek-letters/vendor/friendsofsymfony/user-bundle/Resources/views</argument>
@@ -3010,12 +2945,6 @@
     <service id="doctrine.dbal.default_connection.event_manager" class="Symfony\Bridge\Doctrine\ContainerAwareEventManager" public="false">
       <argument type="service" id="service_container"/>
       <call method="addEventSubscriber">
-        <argument type="service" id="stof_doctrine_extensions.listener.timestampable"/>
-      </call>
-      <call method="addEventSubscriber">
-        <argument type="service" id="stof_doctrine_extensions.listener.sluggable"/>
-      </call>
-      <call method="addEventSubscriber">
         <argument type="service" id="fos_user.user_listener"/>
       </call>
       <call method="addEventListener">
@@ -3030,9 +2959,9 @@
         <argument key="driver">pdo_mysql</argument>
         <argument key="host">127.0.0.1</argument>
         <argument key="port">null</argument>
-        <argument key="dbname">geek_letters</argument>
+        <argument key="dbname">symfony</argument>
         <argument key="user">root</argument>
-        <argument key="password">angelus</argument>
+        <argument key="password">null</argument>
         <argument key="charset">UTF8</argument>
         <argument key="driverOptions" type="collection"/>
         <argument key="defaultTableOptions" type="collection"/>
@@ -3462,10 +3391,6 @@
         <argument>twig</argument>
       </call>
       <call method="addResource">
-        <argument type="service" id="assetic.twig_directory_resource.StofDoctrineExtensionsBundle"/>
-        <argument>twig</argument>
-      </call>
-      <call method="addResource">
         <argument type="service" id="assetic.twig_directory_resource.DebugBundle"/>
         <argument>twig</argument>
       </call>
@@ -3536,7 +3461,6 @@
         <argument>AppBundle</argument>
         <argument>FOSUserBundle</argument>
         <argument>AsseticBundle</argument>
-        <argument>StofDoctrineExtensionsBundle</argument>
         <argument>DebugBundle</argument>
         <argument>WebProfilerBundle</argument>
         <argument>SensioDistributionBundle</argument>
@@ -3580,95 +3504,6 @@
     </service>
     <service id="assetic.request_listener" class="Symfony\Bundle\AsseticBundle\EventListener\RequestListener">
       <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest"/>
-    </service>
-    <service id="stof_doctrine_extensions.listener.timestampable" class="Gedmo\Timestampable\TimestampableListener" public="false">
-      <tag name="doctrine.event_subscriber" connection="default"/>
-      <call method="setAnnotationReader">
-        <argument type="service" id="annotations.cached_reader"/>
-      </call>
-    </service>
-    <service id="stof_doctrine_extensions.listener.blameable" class="Gedmo\Blameable\BlameableListener" public="false">
-      <call method="setAnnotationReader">
-        <argument type="service" id="annotations.cached_reader"/>
-      </call>
-    </service>
-    <service id="stof_doctrine_extensions.listener.tree" class="Gedmo\Tree\TreeListener" public="false">
-      <call method="setAnnotationReader">
-        <argument type="service" id="annotations.cached_reader"/>
-      </call>
-    </service>
-    <service id="stof_doctrine_extensions.listener.sluggable" class="Gedmo\Sluggable\SluggableListener" public="false">
-      <tag name="doctrine.event_subscriber" connection="default"/>
-      <call method="setAnnotationReader">
-        <argument type="service" id="annotations.cached_reader"/>
-      </call>
-    </service>
-    <service id="stof_doctrine_extensions.listener.translatable" class="Gedmo\Translatable\TranslatableListener" public="false">
-      <call method="setAnnotationReader">
-        <argument type="service" id="annotations.cached_reader"/>
-      </call>
-      <call method="setDefaultLocale">
-        <argument>fr_FR</argument>
-      </call>
-      <call method="setTranslatableLocale">
-        <argument>fr_FR</argument>
-      </call>
-      <call method="setTranslationFallback">
-        <argument>false</argument>
-      </call>
-      <call method="setPersistDefaultLocaleTranslation">
-        <argument>false</argument>
-      </call>
-      <call method="setSkipOnLoad">
-        <argument>false</argument>
-      </call>
-    </service>
-    <service id="stof_doctrine_extensions.listener.loggable" class="Gedmo\Loggable\LoggableListener" public="false">
-      <call method="setAnnotationReader">
-        <argument type="service" id="annotations.cached_reader"/>
-      </call>
-    </service>
-    <service id="stof_doctrine_extensions.listener.sortable" class="Gedmo\Sortable\SortableListener" public="false">
-      <call method="setAnnotationReader">
-        <argument type="service" id="annotations.cached_reader"/>
-      </call>
-    </service>
-    <service id="stof_doctrine_extensions.listener.softdeleteable" class="Gedmo\SoftDeleteable\SoftDeleteableListener" public="false">
-      <call method="setAnnotationReader">
-        <argument type="service" id="annotations.cached_reader"/>
-      </call>
-    </service>
-    <service id="stof_doctrine_extensions.listener.uploadable" class="Gedmo\Uploadable\UploadableListener" public="false">
-      <argument type="service" id="stof_doctrine_extensions.uploadable.mime_type_guesser"/>
-      <call method="setAnnotationReader">
-        <argument type="service" id="annotations.cached_reader"/>
-      </call>
-      <call method="setDefaultFileInfoClass">
-        <argument>Stof\DoctrineExtensionsBundle\Uploadable\UploadedFileInfo</argument>
-      </call>
-    </service>
-    <service id="stof_doctrine_extensions.listener.reference_integrity" class="Gedmo\ReferenceIntegrity\ReferenceIntegrityListener" public="false">
-      <call method="setAnnotationReader">
-        <argument type="service" id="annotations.cached_reader"/>
-      </call>
-    </service>
-    <service id="stof_doctrine_extensions.event_listener.locale" class="Stof\DoctrineExtensionsBundle\EventListener\LocaleListener" public="false">
-      <argument type="service" id="stof_doctrine_extensions.listener.translatable"/>
-    </service>
-    <service id="stof_doctrine_extensions.event_listener.logger" class="Stof\DoctrineExtensionsBundle\EventListener\LoggerListener" public="false">
-      <argument type="service" id="stof_doctrine_extensions.listener.loggable"/>
-      <argument type="service" id="security.token_storage"/>
-      <argument type="service" id="security.authorization_checker"/>
-    </service>
-    <service id="stof_doctrine_extensions.event_listener.blame" class="Stof\DoctrineExtensionsBundle\EventListener\BlameListener" public="false">
-      <argument type="service" id="stof_doctrine_extensions.listener.blameable"/>
-      <argument type="service" id="security.token_storage"/>
-      <argument type="service" id="security.authorization_checker"/>
-    </service>
-    <service id="stof_doctrine_extensions.uploadable.mime_type_guesser" class="Stof\DoctrineExtensionsBundle\Uploadable\MimeTypeGuesserAdapter" public="false"/>
-    <service id="stof_doctrine_extensions.uploadable.manager" class="Stof\DoctrineExtensionsBundle\Uploadable\UploadableManager">
-      <argument type="service" id="stof_doctrine_extensions.listener.uploadable"/>
-      <argument>Stof\DoctrineExtensionsBundle\Uploadable\UploadedFileInfo</argument>
     </service>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
       <tag name="twig.extension"/>
@@ -3845,124 +3680,19 @@
     <service id="web_server.command.server_status" class="Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand" public="false">
       <tag name="console.command"/>
     </service>
-    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\ArticleController" class="AppBundle\Controller\ArticleController" autowire="true" abstract="true"/>
-    <service id="abstract.instanceof.AppBundle\Controller\ArticleController" class="AppBundle\Controller\ArticleController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\CategoryController" class="AppBundle\Controller\CategoryController" autowire="true" abstract="true"/>
-    <service id="abstract.instanceof.AppBundle\Controller\CategoryController" class="AppBundle\Controller\CategoryController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\CommentController" class="AppBundle\Controller\CommentController" autowire="true" abstract="true"/>
-    <service id="abstract.instanceof.AppBundle\Controller\CommentController" class="AppBundle\Controller\CommentController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\UserController" class="AppBundle\Controller\UserController" autowire="true" abstract="true"/>
-    <service id="abstract.instanceof.AppBundle\Controller\UserController" class="AppBundle\Controller\UserController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\ArticleType" class="AppBundle\Form\ArticleType" public="false" autowire="true" abstract="true"/>
-    <service id="abstract.instanceof.AppBundle\Form\ArticleType" class="AppBundle\Form\ArticleType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\CategoryType" class="AppBundle\Form\CategoryType" public="false" autowire="true" abstract="true"/>
-    <service id="abstract.instanceof.AppBundle\Form\CategoryType" class="AppBundle\Form\CategoryType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\CommentType" class="AppBundle\Form\CommentType" public="false" autowire="true" abstract="true"/>
-    <service id="abstract.instanceof.AppBundle\Form\CommentType" class="AppBundle\Form\CommentType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\UserType" class="AppBundle\Form\UserType" public="false" autowire="true" abstract="true"/>
-    <service id="abstract.instanceof.AppBundle\Form\UserType" class="AppBundle\Form\UserType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id="service_locator.24b75319cd98f5b17598a3b81dccf160" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.4f8384c8862c511eefe34301cff90111" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection"/>
     </service>
-    <service id="service_locator.31ebdf7493ee1da3e30a7117f0a73821" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="article" type="service" id="autowired.AppBundle\Entity\Article"/>
-      </argument>
-    </service>
-    <service id="service_locator.a32f3efd6220afdca3c38ac609e894da" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="article" type="service" id="autowired.AppBundle\Entity\Article"/>
-      </argument>
-    </service>
-    <service id="service_locator.3361c83547e0e938169a0e35e60f6dac" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.ebdaf59977bc26dc6a191d4f5f8254cb" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection"/>
     </service>
-    <service id="service_locator.68452d5bbf5cae07e35315cb7ff2ec7d" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.61ce42ee314d3459d7339b36d3fecf2a" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="category" type="service" id="autowired.AppBundle\Entity\Category"/>
-      </argument>
-    </service>
-    <service id="service_locator.935df036c0760a61bb7b241d0e23f506" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="category" type="service" id="autowired.AppBundle\Entity\Category"/>
-      </argument>
-    </service>
-    <service id="service_locator.bfebc44e3ee7d530db9209922c9c6689" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection"/>
-    </service>
-    <service id="service_locator.397cf7a31f6f24b51d348a46d7d2b0e2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="comment" type="service" id="autowired.AppBundle\Entity\Comment"/>
-      </argument>
-    </service>
-    <service id="service_locator.af4107014b352ccbebf632bf1a5d398c" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="comment" type="service" id="autowired.AppBundle\Entity\Comment"/>
-      </argument>
-    </service>
-    <service id="service_locator.4f27295e1ee3cd81c185c2a4cb89efcf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection"/>
-    </service>
-    <service id="service_locator.61c4bc70092b00e9393797dce8125338" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="user" type="service" id="autowired.AppBundle\Entity\User"/>
-      </argument>
-    </service>
-    <service id="service_locator.d2e290ca80e3b37e6a2573f8013be792" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="user" type="service" id="autowired.AppBundle\Entity\User"/>
-      </argument>
-    </service>
-    <service id="service_locator.594c149ffb180647b64e58ba78895037" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="AppBundle\Controller\ArticleController:deleteAction" type="service" id="service_locator.a32f3efd6220afdca3c38ac609e894da"/>
-        <argument key="AppBundle\Controller\ArticleController:editAction" type="service" id="service_locator.a32f3efd6220afdca3c38ac609e894da"/>
-        <argument key="AppBundle\Controller\ArticleController:showAction" type="service" id="service_locator.31ebdf7493ee1da3e30a7117f0a73821"/>
-        <argument key="AppBundle\Controller\CategoryController:deleteAction" type="service" id="service_locator.935df036c0760a61bb7b241d0e23f506"/>
-        <argument key="AppBundle\Controller\CategoryController:editAction" type="service" id="service_locator.935df036c0760a61bb7b241d0e23f506"/>
-        <argument key="AppBundle\Controller\CategoryController:showAction" type="service" id="service_locator.68452d5bbf5cae07e35315cb7ff2ec7d"/>
-        <argument key="AppBundle\Controller\CommentController:deleteAction" type="service" id="service_locator.af4107014b352ccbebf632bf1a5d398c"/>
-        <argument key="AppBundle\Controller\CommentController:editAction" type="service" id="service_locator.af4107014b352ccbebf632bf1a5d398c"/>
-        <argument key="AppBundle\Controller\CommentController:showAction" type="service" id="service_locator.397cf7a31f6f24b51d348a46d7d2b0e2"/>
-        <argument key="AppBundle\Controller\UserController:deleteAction" type="service" id="service_locator.d2e290ca80e3b37e6a2573f8013be792"/>
-        <argument key="AppBundle\Controller\UserController:editAction" type="service" id="service_locator.d2e290ca80e3b37e6a2573f8013be792"/>
-        <argument key="AppBundle\Controller\UserController:showAction" type="service" id="service_locator.61c4bc70092b00e9393797dce8125338"/>
-        <argument key="AppBundle\Controller\ArticleController::deleteAction" type="service" id="service_locator.a32f3efd6220afdca3c38ac609e894da"/>
-        <argument key="AppBundle\Controller\ArticleController::editAction" type="service" id="service_locator.a32f3efd6220afdca3c38ac609e894da"/>
-        <argument key="AppBundle\Controller\ArticleController::showAction" type="service" id="service_locator.31ebdf7493ee1da3e30a7117f0a73821"/>
-        <argument key="AppBundle\Controller\CategoryController::deleteAction" type="service" id="service_locator.935df036c0760a61bb7b241d0e23f506"/>
-        <argument key="AppBundle\Controller\CategoryController::editAction" type="service" id="service_locator.935df036c0760a61bb7b241d0e23f506"/>
-        <argument key="AppBundle\Controller\CategoryController::showAction" type="service" id="service_locator.68452d5bbf5cae07e35315cb7ff2ec7d"/>
-        <argument key="AppBundle\Controller\CommentController::deleteAction" type="service" id="service_locator.af4107014b352ccbebf632bf1a5d398c"/>
-        <argument key="AppBundle\Controller\CommentController::editAction" type="service" id="service_locator.af4107014b352ccbebf632bf1a5d398c"/>
-        <argument key="AppBundle\Controller\CommentController::showAction" type="service" id="service_locator.397cf7a31f6f24b51d348a46d7d2b0e2"/>
-        <argument key="AppBundle\Controller\UserController::deleteAction" type="service" id="service_locator.d2e290ca80e3b37e6a2573f8013be792"/>
-        <argument key="AppBundle\Controller\UserController::editAction" type="service" id="service_locator.d2e290ca80e3b37e6a2573f8013be792"/>
-        <argument key="AppBundle\Controller\UserController::showAction" type="service" id="service_locator.61c4bc70092b00e9393797dce8125338"/>
-      </argument>
-    </service>
-    <service id="service_locator.d3751e28ed876ad171cd8f1ba26dd672" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="AppBundle\Form\ArticleType" type="service" id="AppBundle\Form\ArticleType"/>
-        <argument key="AppBundle\Form\CategoryType" type="service" id="AppBundle\Form\CategoryType"/>
-        <argument key="AppBundle\Form\CommentType" type="service" id="AppBundle\Form\CommentType"/>
-        <argument key="AppBundle\Form\UserType" type="service" id="AppBundle\Form\UserType"/>
         <argument key="FOS\UserBundle\Form\Type\ChangePasswordFormType" type="service" id="fos_user.change_password.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\ProfileFormType" type="service" id="fos_user.profile.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\RegistrationFormType" type="service" id="fos_user.registration.form.type"/>
@@ -4372,28 +4102,6 @@
         </argument>
       </argument>
     </service>
-    <service id="assetic.twig_directory_resource.StofDoctrineExtensionsBundle" class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
-      <tag name="assetic.templating.twig"/>
-      <tag name="assetic.formula_resource" loader="twig"/>
-      <argument type="collection">
-        <argument type="service">
-          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource" public="false">
-            <argument type="service" id="templating.loader"/>
-            <argument>StofDoctrineExtensionsBundle</argument>
-            <argument>/var/www/html/geek-letters/app/Resources/StofDoctrineExtensionsBundle/views</argument>
-            <argument>/\.[^.]+\.twig$/</argument>
-          </service>
-        </argument>
-        <argument type="service">
-          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource" public="false">
-            <argument type="service" id="templating.loader"/>
-            <argument>StofDoctrineExtensionsBundle</argument>
-            <argument>/var/www/html/geek-letters/vendor/stof/doctrine-extensions-bundle/Resources/views</argument>
-            <argument>/\.[^.]+\.twig$/</argument>
-          </service>
-        </argument>
-      </argument>
-    </service>
     <service id="assetic.twig_directory_resource.DebugBundle" class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
       <tag name="assetic.templating.twig"/>
       <tag name="assetic.formula_resource" loader="twig"/>
@@ -4553,7 +4261,7 @@
     <service id="cache.system.recorder.inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>xUIuhYPJEF</argument>
       <argument>0</argument>
-      <argument>nw5tbQ+0mfxmpE3TLJAepK</argument>
+      <argument>fybhUJkVehot3RZt5YM3EN</argument>
       <argument>/var/www/html/geek-letters/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4561,7 +4269,7 @@
     <service id="cache.validator.recorder.inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>Las2jKfCr5</argument>
       <argument>0</argument>
-      <argument>nw5tbQ+0mfxmpE3TLJAepK</argument>
+      <argument>fybhUJkVehot3RZt5YM3EN</argument>
       <argument>/var/www/html/geek-letters/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4569,7 +4277,7 @@
     <service id="cache.serializer.recorder.inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>XKwxcFeiZu</argument>
       <argument>0</argument>
-      <argument>nw5tbQ+0mfxmpE3TLJAepK</argument>
+      <argument>fybhUJkVehot3RZt5YM3EN</argument>
       <argument>/var/www/html/geek-letters/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4577,7 +4285,7 @@
     <service id="cache.annotations.recorder.inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>r0jfJBpvQc</argument>
       <argument>0</argument>
-      <argument>nw5tbQ+0mfxmpE3TLJAepK</argument>
+      <argument>fybhUJkVehot3RZt5YM3EN</argument>
       <argument>/var/www/html/geek-letters/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4588,10 +4296,6 @@
         <argument key="twig" type="service" id="twig"/>
       </argument>
     </service>
-    <service id="autowired.AppBundle\Entity\Article" class="AppBundle\Entity\Article" public="false" autowire="true"/>
-    <service id="autowired.AppBundle\Entity\Category" class="AppBundle\Entity\Category" public="false" autowire="true"/>
-    <service id="autowired.AppBundle\Entity\Comment" class="AppBundle\Entity\Comment" public="false" autowire="true"/>
-    <service id="autowired.AppBundle\Entity\User" class="AppBundle\Entity\User" public="false" autowire="true"/>
     <service id="service_locator.39e66930232432ca5ba91e98fdd8a17b" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">

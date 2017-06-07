@@ -5,28 +5,9 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        {% stylesheets
-            'assets/css/bootstrap.min.css'
-            'assets/css/style.css'
-            filter='cssrewrite' output='assets/css/compiled/app.css' %}
-            <link rel="stylesheet" href="{{ asset_url }}" />
-        {% endstylesheets %}
     </head>
     <body>
-    {% block nav %}
-    {{ include('includes/navbar.html.twig') }}
-    {% endblock %}
-        <div class="container-fluid">
         {% block body %}{% endblock %}
-        {% block footer %}
-        {{ include('includes/footer.html.twig') }}
-        {% endblock %}
-        </div>
-        {% javascripts
-            'assets/js/jquery.min.js'
-            'assets/js/bootstrap.min.js'
-            output='assets/js/compiled/app.js' %}
-            <script src="{{ asset_url }}"></script>
-        {% endjavascripts %}
+        {% block javascripts %}{% endblock %}
     </body>
 </html>

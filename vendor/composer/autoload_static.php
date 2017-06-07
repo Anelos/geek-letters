@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd674dc0bb61f322bdbc2d5acc2cba757
+class ComposerStaticInit5d209f888da56740c030cb53c5e1b803
 {
     public static $files = array (
         '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
@@ -41,7 +41,6 @@ class ComposerStaticInitd674dc0bb61f322bdbc2d5acc2cba757
             'Symfony\\Bridge\\PhpUnit\\' => 23,
             'Symfony\\Bridge\\Monolog\\' => 23,
             'Symfony\\Bridge\\Doctrine\\' => 24,
-            'Stof\\DoctrineExtensionsBundle\\' => 30,
             'Sensio\\Bundle\\GeneratorBundle\\' => 30,
             'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
             'Sensio\\Bundle\\DistributionBundle\\' => 33,
@@ -54,17 +53,9 @@ class ComposerStaticInitd674dc0bb61f322bdbc2d5acc2cba757
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
         ),
-        'N' => 
-        array (
-            'Negotiation\\' => 12,
-        ),
         'M' => 
         array (
             'Monolog\\' => 8,
-        ),
-        'J' => 
-        array (
-            'JMS\\SerializerBundle\\' => 21,
         ),
         'I' => 
         array (
@@ -74,7 +65,6 @@ class ComposerStaticInitd674dc0bb61f322bdbc2d5acc2cba757
         array (
             'Fig\\Link\\' => 9,
             'FOS\\UserBundle\\' => 15,
-            'FOS\\RestBundle\\' => 15,
         ),
         'D' => 
         array (
@@ -155,10 +145,6 @@ class ComposerStaticInitd674dc0bb61f322bdbc2d5acc2cba757
         array (
             0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bridge/Doctrine',
         ),
-        'Stof\\DoctrineExtensionsBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/stof/doctrine-extensions-bundle',
-        ),
         'Sensio\\Bundle\\GeneratorBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/sensio/generator-bundle',
@@ -191,17 +177,9 @@ class ComposerStaticInitd674dc0bb61f322bdbc2d5acc2cba757
         array (
             0 => __DIR__ . '/..' . '/psr/cache/src',
         ),
-        'Negotiation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/willdurand/negotiation/src/Negotiation',
-        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
-        ),
-        'JMS\\SerializerBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/jms/serializer-bundle',
         ),
         'Incenteev\\ParameterHandler\\' => 
         array (
@@ -214,10 +192,6 @@ class ComposerStaticInitd674dc0bb61f322bdbc2d5acc2cba757
         'FOS\\UserBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/friendsofsymfony/user-bundle',
-        ),
-        'FOS\\RestBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/friendsofsymfony/rest-bundle',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
@@ -264,46 +238,6 @@ class ComposerStaticInitd674dc0bb61f322bdbc2d5acc2cba757
                 0 => __DIR__ . '/..' . '/sensiolabs/security-checker',
             ),
         ),
-        'P' => 
-        array (
-            'PhpOption\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/phpoption/phpoption/src',
-            ),
-            'PhpCollection' => 
-            array (
-                0 => __DIR__ . '/..' . '/phpcollection/phpcollection/src',
-            ),
-        ),
-        'M' => 
-        array (
-            'Metadata\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/jms/metadata/src',
-            ),
-        ),
-        'J' => 
-        array (
-            'JsonpCallbackValidator' => 
-            array (
-                0 => __DIR__ . '/..' . '/willdurand/jsonp-callback-validator/src',
-            ),
-            'JMS\\Serializer' => 
-            array (
-                0 => __DIR__ . '/..' . '/jms/serializer/src',
-            ),
-            'JMS\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/jms/parser-lib/src',
-            ),
-        ),
-        'G' => 
-        array (
-            'Gedmo\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/gedmo/doctrine-extensions/lib',
-            ),
-        ),
         'D' => 
         array (
             'Doctrine\\ORM\\' => 
@@ -329,13 +263,6 @@ class ComposerStaticInitd674dc0bb61f322bdbc2d5acc2cba757
             'Doctrine\\Common\\Annotations\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/annotations/lib',
-            ),
-        ),
-        'B' => 
-        array (
-            'Behat\\Transliterator' => 
-            array (
-                0 => __DIR__ . '/..' . '/behat/transliterator/src',
             ),
         ),
         'A' => 
@@ -366,11 +293,11 @@ class ComposerStaticInitd674dc0bb61f322bdbc2d5acc2cba757
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd674dc0bb61f322bdbc2d5acc2cba757::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd674dc0bb61f322bdbc2d5acc2cba757::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInitd674dc0bb61f322bdbc2d5acc2cba757::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitd674dc0bb61f322bdbc2d5acc2cba757::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitd674dc0bb61f322bdbc2d5acc2cba757::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5d209f888da56740c030cb53c5e1b803::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5d209f888da56740c030cb53c5e1b803::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit5d209f888da56740c030cb53c5e1b803::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit5d209f888da56740c030cb53c5e1b803::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit5d209f888da56740c030cb53c5e1b803::$classMap;
 
         }, null, ClassLoader::class);
     }

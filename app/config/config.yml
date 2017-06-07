@@ -60,7 +60,6 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
-
 # Swiftmailer Configuration
 swiftmailer:
     transport: '%mailer_transport%'
@@ -82,17 +81,3 @@ fos_user:
     from_email:
         address: "civodul.teros@gmail.com"
         sender_name: "Admin"
-
-framework:
-    translator: ~
-
-twig:
-    globals:
-        fos_csrf_provider: "@security.csrf.token_manager"
-
-stof_doctrine_extensions:
-    default_locale: fr_FR
-    orm:
-        default:
-            sluggable:   true
-            timestampable: true
