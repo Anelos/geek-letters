@@ -8,7 +8,8 @@
 
         <div class="row main">
 
-            <div class="col-md-6 col-md-offset-3">
+          <button id="scrollTop">Go Top</button>
+            <div class="col-md-6">
               <h1>Articles :</h1>
                 {% if is_granted("ROLE_SUPER_ADMIN") %}
                 <form name="appbundle_article" method="post">
@@ -47,7 +48,7 @@
                     {{ render(controller( 'AppBundle:Article:published' )) }}
                 {% endif %}
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
             </div>
         </div>
     </div>

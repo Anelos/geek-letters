@@ -6,7 +6,7 @@ body, * {
   from {
     background-color: red; }
   to {
-    background-color: yellow; } }
+    background-color: #207e82; } }
 @font-face {
   font-family: 'geek';
   src: url("../fonts/OptimusPrinceps.ttf"); }
@@ -36,9 +36,8 @@ body, * {
   .header h3 {
     margin-top: 2%; }
 
-.main h1 {
-  max-width: 25%;
-  border-bottom: 1px solid black; }
+.main {
+  margin-bottom: 3%; }
 
 .footer {
   width: 100%;
@@ -53,7 +52,6 @@ body, * {
     margin-top: 10px; }
 
 .well {
-  width: 50%;
   margin-bottom: 0px; }
 
 .comments {
@@ -86,10 +84,51 @@ body, * {
     width: 24em; } }
 @keyframes blinkTextCursor {
   from {
-    border-right-color: rgba(255, 255, 255, 0.75); }
+    border-right-color: rgba(255, 255, 255, 0); }
   to {
     border-right-color: transparent; } }
 .article {
   margin-top: 4%; }
+
+.edit {
+  margin-left: 10%;
+  text-align: justify; }
+
+.gras {
+  font-weight: bold; }
+
+.notPubished .well {
+  background-color: rgba(203, 47, 47, 0.91); }
+
+@media (max-width: 768px) {
+  .categorie {
+    display: none; }
+
+  .line-1 {
+    display: none; } }
+.user th, .user tr {
+  border: 1px solid black; }
+.user li {
+  list-style-type: none; }
+
+#appbundle_article_title {
+  margin-left: 5%; }
+
+#appbundle_article_content {
+  margin-left: 2%; }
+
+#appbundle_article_category {
+  margin-left: 1%; }
+
+.inputEdit {
+  margin-left: 6%; }
+
+.inputDelete {
+  margin-left: 6%; }
+
+#scrollTop {
+  z-index: 5;
+  bottom: 10%;
+  position: fixed; }
 
 /*# sourceMappingURL=style.css.map */
