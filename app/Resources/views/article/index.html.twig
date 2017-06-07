@@ -34,7 +34,7 @@
                                     <label for="appbundle_comment_article">Article</label>
                                     <input type="hidden" id="appbundle_comment_article" name="appbundle_comment[article]" value="{{ article.id }}">
                                 </div>
-                                <input type="hidden" id="appbundle_comment__token" name="appbundle_comment[_token]" value="ZyE30fEeQShYRuH6M_uqqayVK8rtkSt_sW5W19sAXVQ"></div>
+                                <input type="hidden" id="appbundle_comment__token" name="appbundle_comment[_token]" value="{{ csrf_token('appbundle_comment') }}"></div>
                             <input type="submit" value="Create">
                         </form>
                     {% else %}

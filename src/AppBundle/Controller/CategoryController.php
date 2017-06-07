@@ -32,11 +32,11 @@ class CategoryController extends Controller
     }
 
     /**
-     * Creates a new category entity.
-     *
-     * @Route("/new", name="category_new")
-     * @Method({"GET", "POST"})
-     */
+    * Creates a new category entity.
+    *
+    * @Route("/new", name="category_new")
+    * @Method({"GET", "POST"})
+    */
     public function newAction(Request $request)
     {
         $category = new Category();
