@@ -1,8 +1,9 @@
 {% block body %}
     <h1>Comment creation</h1>
 
-    {{ form_start(form) }}
+    {{ form_start(form, {'action': path('comment_new')}) }}
         {{ form_widget(form) }}
+
         <input type="submit" value="Create" />
     {{ form_end(form) }}
 

@@ -3,7 +3,10 @@
   <div class="container-fluid">
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
       
+      <a class="navbar-brand" href="#">Geek Letter</a>
+
       <ul class="nav navbar-nav navbar-right">
       {% if not is_granted("ROLE_USER") %}
         <li class="dropdown">
@@ -24,7 +27,7 @@
         </li>
 
         {% else %}
-        <li><a href="#">{{ app.user.username }}</a></li>
+        <li><a href="{{ path('user_edit', { 'id': app.user.id }) }}">{{ app.user.username }}</a></li>
         <li><a href="{{ path('fos_user_security_logout') }}"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></a></li>
         {% endif %}
       </ul>

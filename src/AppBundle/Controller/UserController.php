@@ -5,7 +5,9 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * User controller.
@@ -44,6 +46,13 @@ class UserController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $file = $user -> getAvatar();
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+            $file->move(
+                $this->getParameter('avatars_directory'),
+                $fileName
+            );
+            $user->setAvatar($fileName);
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
@@ -81,11 +90,22 @@ class UserController extends Controller
      */
     public function editAction(Request $request, User $user)
     {
+        $loggedUser = $this->getUser();
+        if ($user != $loggedUser){
+            throw new NotFoundHttpException("Page not found");
+        }
         $deleteForm = $this->createDeleteForm($user);
         $editForm = $this->createForm('AppBundle\Form\UserType', $user);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $file = $user -> getAvatar();
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+            $file->move(
+                $this->getParameter('avatars_directory'),
+                $fileName
+            );
+            $user->setAvatar($fileName);
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('user_edit', array('id' => $user->getId()));

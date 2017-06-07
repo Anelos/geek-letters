@@ -29,7 +29,7 @@ class ArticleController extends Controller
 
     /**
      * Lists all article entities.
-     * @Route("/article/", name="published_article_index")
+     * @Route("/article/published", name="published_article")
      * @Method("GET")
      */
     public function publishedAction()
@@ -62,7 +62,7 @@ class ArticleController extends Controller
             $em->persist($article);
             $em->flush();
 
-            return $this->redirectToRoute('article_show', array('id' => $article->getId()));
+            return $this->redirectToRoute('homepage');
         }
 
         return $this->render('article/new.html.twig', array(

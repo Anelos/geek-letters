@@ -1,15 +1,19 @@
 {% block body %}
-        {% for article in articles %}
-        <div class='row'>
+    {% for article in articles %}
+    {% if article.published !=1 %}
+        <div class='row article notPubished'>
+    {% else %}
+        <div class='row article '>
+    {% endif %}
             <div class= "well">
                 <h3>{{ article.title }}</h3>
                 {% if article.published !=1 %}
                 <p><span>Not Published Yet</span></p>
                 {% endif %}
-                <p>{{ article.category }}
+                <p>Categorie : {{ article.category }}
                 <p>{{ article.content }}</p>
-                <p>created at: {{ article.createdAt|date('d-m-Y') }} {% if article.updatedAt != article.createdAt %}Edited {% endif %}</p>
-                <p>by : {{ article.user.username }}</p>
+                <p>created at: {{ article.createdAt|date('d-m-Y') }} {% if article.updatedAt != article.createdAt %}Edited {% endif %}
+                by : {{ article.user.username }}</p>
                 {% if is_granted("ROLE_SUPER_ADMIN") %}
                 <a href="{{ path('article_edit', { 'id': article.id }) }}">edit</a>
                 {% endif %}
@@ -20,18 +24,19 @@
             <div class="collapse" id="collapse{{ article.id }}">
                 <div class="well comments">
                     {% if is_granted("ROLE_USER") %}
-                     <form name="appbundle_comment" method="post" action="/comment/new">
-                        <div id="appbundle_comment"><div>
-                        <label for="appbundle_comment_content" class="required">Content</label>
-                        <textarea id="appbundle_comment_content" name="appbundle_comment[content]" required="required"></textarea>
-                        </div>
-                        <div>
-                        <label for="appbundle_comment_article">Article</label>
-                        <input  type="hidden" id="appbundle_comment_article" name="appbundle_comment[article]" value="{{ article.id }}">
-                        </div
-                        ><input type="hidden" id="appbundle_comment__token" name="appbundle_comment[_token]" value="WhvMZqhkkJRvAxR4I9uX1WC4wnPrbLRxrhbks-jU_MY"></div>
-        <input type="submit" value="Create">
-    </form>
+                        <form name="appbundle_comment" method="post" action={{ path('comment_new') }}>
+                            <div id="appbundle_comment">
+                                <div>
+                                    <label for="appbundle_comment_content" class="required">Content</label>
+                                    <textarea id="appbundle_comment_content" name="appbundle_comment[content]" required="required"></textarea>
+                                </div>
+                                <div>
+                                    <label for="appbundle_comment_article">Article</label>
+                                    <input type="hidden" id="appbundle_comment_article" name="appbundle_comment[article]" value="{{ article.id }}">
+                                </div>
+                                <input type="hidden" id="appbundle_comment__token" name="appbundle_comment[_token]" value="{{ csrf_token('appbundle_comment') }}"></div>
+                            <input type="submit" value="Create">
+                        </form>
                     {% else %}
                     {% endif %}
 

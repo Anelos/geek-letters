@@ -32,11 +32,11 @@ class CategoryController extends Controller
     }
 
     /**
-     * Creates a new category entity.
-     *
-     * @Route("/new", name="category_new")
-     * @Method({"GET", "POST"})
-     */
+    * Creates a new category entity.
+    *
+    * @Route("/new", name="category_new")
+    * @Method({"GET", "POST"})
+    */
     public function newAction(Request $request)
     {
         $category = new Category();
@@ -48,7 +48,7 @@ class CategoryController extends Controller
             $em->persist($category);
             $em->flush();
 
-            return $this->redirectToRoute('category_show', array('id' => $category->getId()));
+            return $this->redirectToRoute('homepage');
         }
 
         return $this->render('category/new.html.twig', array(
