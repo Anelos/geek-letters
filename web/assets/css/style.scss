@@ -46,6 +46,8 @@ body , *{
   }
 }
 .footer{
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height:40px;
   background-color: black;
@@ -60,7 +62,6 @@ body , *{
   }
 }
 .well{
-  width: 50%;
   margin-bottom: 0px;
 }
 .comments{
@@ -98,4 +99,12 @@ body , *{
 }
 .article{
   margin-top: 4%;
+}
+@media screen and (max-width: 767px){
+  .main h1{
+    display: none;
+  }
+  .line-1{
+    display: none;
+  }
 }

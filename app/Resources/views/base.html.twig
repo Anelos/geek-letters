@@ -18,10 +18,10 @@
     {% endblock %}
         <div class="container-fluid">
         {% block body %}{% endblock %}
-        </div>
         {% block footer %}
         {{ include('includes/footer.html.twig') }}
         {% endblock %}
+        </div>
         {% javascripts
             'assets/js/jquery.min.js'
             'assets/js/bootstrap.min.js'
