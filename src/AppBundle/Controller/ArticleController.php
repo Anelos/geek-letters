@@ -28,22 +28,6 @@ class ArticleController extends Controller
     }
 
     /**
-     * Lists all article entities.
-     * @Route("/article/", name="published_article_index")
-     * @Method("GET")
-     */
-    public function publishedAction()
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $articles = $em->getRepository('AppBundle:Article')->findByPublished('1', Array('id'=>'DESC'));
-        return $this->render('article/index.html.twig', array(
-            'articles' => $articles,
-        ));
-    }
-    
-
-    /**
      * Creates a new article entity.
      *
      * @Route("/article/new", name="article_new")
@@ -62,7 +46,7 @@ class ArticleController extends Controller
             $em->persist($article);
             $em->flush();
 
-            return $this->redirectToRoute('article_show', array('id' => $article->getId()));
+            return $this->redirectToRoute('homepage', array('id' => $article->getId()));
         }
 
         return $this->render('article/new.html.twig', array(

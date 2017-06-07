@@ -1,11 +1,9 @@
 <?php
 namespace AppBundle\Entity;
-
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
-
 /**
  * @ORM\Entity
  * @ORM\Table(name="user_table")
@@ -18,47 +16,39 @@ class User extends BaseUser {
     * @ORM\GeneratedValue(strategy="AUTO")
     */
     protected $id;
-
     /**
     * @ORM\Column(type="string", length=100, nullable=true)
     **/
     private $firstName;
-
     /**
     * @ORM\Column(type="string", length=100, nullable=true)
     **/
     private $lastName;
-
     /**
     * @ORM\Column(type="date", nullable=true )
     **/
     private $birthday;
-
     /**
     * One User has Many articles.
     * @ORM\OneToMany(targetEntity="Article", mappedBy="user")
     */
     private $articles;
-
     /**
     * @ORM\Column(type="string", nullable=true)
     * @Assert\File(mimeTypes={ "image/png" })
     */
     private $avatar;
-
     /**
     * One User has Many comments.
     * @ORM\OneToMany(targetEntity="Comment", mappedBy="user")
     */
     private $comments;
-
     /**
      * Many Users make Many Likes.
      * @ORM\ManyToMany(targetEntity="Article", inversedBy="userLikes")
      * @ORM\JoinTable(name="likes")
      */
     private $articleLikes;
-
     public function __construct()
     {
         parent::__construct();
@@ -66,13 +56,10 @@ class User extends BaseUser {
         $this->comments = new ArrayCollection();
         $this->articleLikes = new ArrayCollection();
     }
-
     public function __toString()
     {
         return $this->username;
     }
-
-
     /**
      * Set firstName
      *
@@ -83,10 +70,8 @@ class User extends BaseUser {
     public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
-
         return $this;
     }
-
     /**
      * Get firstName
      *
@@ -96,7 +81,6 @@ class User extends BaseUser {
     {
         return $this->firstName;
     }
-
     /**
      * Set lastName
      *
@@ -107,10 +91,8 @@ class User extends BaseUser {
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
-
         return $this;
     }
-
     /**
      * Get lastName
      *
@@ -120,7 +102,6 @@ class User extends BaseUser {
     {
         return $this->lastName;
     }
-
     /**
      * Set birthday
      *
@@ -131,10 +112,8 @@ class User extends BaseUser {
     public function setBirthday($birthday)
     {
         $this->birthday = $birthday;
-
         return $this;
     }
-
     /**
      * Get birthday
      *
@@ -144,7 +123,6 @@ class User extends BaseUser {
     {
         return $this->birthday;
     }
-
     /**
      * Set avatar
      *
@@ -155,10 +133,8 @@ class User extends BaseUser {
     public function setAvatar($avatar)
     {
         $this->avatar = $avatar;
-
         return $this;
     }
-
     /**
      * Get avatar
      *
@@ -168,7 +144,6 @@ class User extends BaseUser {
     {
         return $this->avatar;
     }
-
     /**
      * Add article
      *
@@ -179,10 +154,8 @@ class User extends BaseUser {
     public function addArticle(\AppBundle\Entity\Article $article)
     {
         $this->articles[] = $article;
-
         return $this;
     }
-
     /**
      * Remove article
      *
@@ -192,7 +165,6 @@ class User extends BaseUser {
     {
         $this->articles->removeElement($article);
     }
-
     /**
      * Get articles
      *
@@ -202,7 +174,6 @@ class User extends BaseUser {
     {
         return $this->articles;
     }
-
     /**
      * Add comment
      *
@@ -213,10 +184,8 @@ class User extends BaseUser {
     public function addComment(\AppBundle\Entity\Comment $comment)
     {
         $this->comments[] = $comment;
-
         return $this;
     }
-
     /**
      * Remove comment
      *
@@ -226,7 +195,6 @@ class User extends BaseUser {
     {
         $this->comments->removeElement($comment);
     }
-
     /**
      * Get comments
      *
@@ -236,7 +204,6 @@ class User extends BaseUser {
     {
         return $this->comments;
     }
-
     /**
      * Add like
      *
@@ -247,10 +214,8 @@ class User extends BaseUser {
     public function addLike(\AppBundle\Entity\Article $like)
     {
         $this->likes[] = $like;
-
         return $this;
     }
-
     /**
      * Remove like
      *
@@ -260,7 +225,6 @@ class User extends BaseUser {
     {
         $this->likes->removeElement($like);
     }
-
     /**
      * Get likes
      *
@@ -270,7 +234,6 @@ class User extends BaseUser {
     {
         return $this->likes;
     }
-
     /**
      * Add articleLike
      *
@@ -281,10 +244,8 @@ class User extends BaseUser {
     public function addArticleLike(\AppBundle\Entity\Article $articleLike)
     {
         $this->articleLikes[] = $articleLike;
-
         return $this;
     }
-
     /**
      * Remove articleLike
      *
@@ -294,7 +255,6 @@ class User extends BaseUser {
     {
         $this->articleLikes->removeElement($articleLike);
     }
-
     /**
      * Get articleLikes
      *

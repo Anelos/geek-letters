@@ -2,7 +2,7 @@
     <h1>Comment creation</h1>
 
     {{ form_start(form) }}
-        {{ form_widget(form) }}
+        {{ form_start(form, {'action': path('comment_new'), 'method': 'POST'}) }}
         <input type="submit" value="Create" />
     {{ form_end(form) }}
 

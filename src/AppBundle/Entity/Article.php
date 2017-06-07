@@ -1,77 +1,62 @@
 <?php
 namespace AppBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
-
-
 /**
  * @ORM\Entity
  * @ORM\Table(name="article")
  */
 class Article {
     use TimestampableEntity;
-
     /**
     * @ORM\Column(type="integer")
     * @ORM\Id
     * @ORM\GeneratedValue(strategy="AUTO")
     */
     private $id;
-
     /**
     * @ORM\ManyToOne(targetEntity="User", inversedBy="articles")
     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
     **/
     private $user;
-
     /**
     * @ORM\Column(type="boolean")
     **/
     private $published;
-
     /**
      * Many Articles have One Category.
      * @ORM\ManyToOne(targetEntity="Category", inversedBy="articles")
      * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
      */
     private $category;
-
     /**
     * @ORM\Column(type="string", length=100)
     **/
     private $title;
-
     /**
     * @ORM\Column(type="text")
     **/
     private $content;
-
     /**
     * One Article has Many Comments.
     * @ORM\OneToMany(targetEntity="Comment", mappedBy="article")
     */
     private $comments;
-
     /**
      * Many Article have Many User likes.
      * @ORM\ManyToMany(targetEntity="User", mappedBy="articleLikes")
      */
     private $userLikes;
-
     public function __construct() {
         $this->userLikes = new ArrayCollection();
         $this->comments = new ArrayCollection();
     }
-
     public function __toString()
     {
     return $this->title;
     }
-
-
     /**
      * Get id
      *
@@ -81,7 +66,6 @@ class Article {
     {
         return $this->id;
     }
-
     /**
      * Set published
      *
@@ -92,10 +76,8 @@ class Article {
     public function setPublished($published)
     {
         $this->published = $published;
-
         return $this;
     }
-
     /**
      * Get published
      *
@@ -105,7 +87,6 @@ class Article {
     {
         return $this->published;
     }
-
     /**
      * Set title
      *
@@ -116,10 +97,8 @@ class Article {
     public function setTitle($title)
     {
         $this->title = $title;
-
         return $this;
     }
-
     /**
      * Get title
      *
@@ -129,7 +108,6 @@ class Article {
     {
         return $this->title;
     }
-
     /**
      * Set content
      *
@@ -140,10 +118,8 @@ class Article {
     public function setContent($content)
     {
         $this->content = $content;
-
         return $this;
     }
-
     /**
      * Get content
      *
@@ -153,7 +129,6 @@ class Article {
     {
         return $this->content;
     }
-
     /**
      * Set user
      *
@@ -164,10 +139,8 @@ class Article {
     public function setUser(\AppBundle\Entity\User $user = null)
     {
         $this->user = $user;
-
         return $this;
     }
-
     /**
      * Get user
      *
@@ -177,7 +150,6 @@ class Article {
     {
         return $this->user;
     }
-
     /**
      * Set category
      *
@@ -188,10 +160,8 @@ class Article {
     public function setCategory(\AppBundle\Entity\Category $category = null)
     {
         $this->category = $category;
-
         return $this;
     }
-
     /**
      * Get category
      *
@@ -201,7 +171,6 @@ class Article {
     {
         return $this->category;
     }
-
     /**
      * Add comment
      *
@@ -212,10 +181,8 @@ class Article {
     public function addComment(\AppBundle\Entity\Comment $comment)
     {
         $this->comments[] = $comment;
-
         return $this;
     }
-
     /**
      * Remove comment
      *
@@ -225,7 +192,6 @@ class Article {
     {
         $this->comments->removeElement($comment);
     }
-
     /**
      * Get comments
      *
@@ -235,7 +201,6 @@ class Article {
     {
         return $this->comments;
     }
-
     /**
      * Add userLike
      *
@@ -246,10 +211,8 @@ class Article {
     public function addUserLike(\AppBundle\Entity\User $userLike)
     {
         $this->userLikes[] = $userLike;
-
         return $this;
     }
-
     /**
      * Remove userLike
      *
@@ -259,7 +222,6 @@ class Article {
     {
         $this->userLikes->removeElement($userLike);
     }
-
     /**
      * Get userLikes
      *
@@ -269,7 +231,6 @@ class Article {
     {
         return $this->userLikes;
     }
-
     public function getCommentsCount()
     {
         return $this->comments->count();
@@ -278,5 +239,4 @@ class Article {
     {
         return $this->likes->count();
     }
-
 }

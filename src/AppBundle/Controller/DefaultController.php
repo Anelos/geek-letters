@@ -11,15 +11,27 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 class DefaultController extends Controller
 {
     /**
-     * Lists all article entities.
-     * @Route("/", name="homepage")
+     * @Route("/{category}", name="homepage")
      * @Method("GET")
      */
-    public function homePageAction()
+
+    public function publishedAction($category='all')
     {
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
+        $em = $this->getDoctrine()->getManager();
+        if( $category == 'all') {
+            $articles = $em->getRepository('AppBundle:Article')->findBy(array(), array('id'=>'DESC'));
+        } else {
+            $articles = $em->getRepository('AppBundle:Article')
+                ->createQueryBuilder('a')
+                ->where('a.category = :category')
+                ->orderBy('a.id','DESC')
+                ->setParameter('category', $category)
+                ->getQuery()
+                ->getResult();
+        }
+        return $this->render('default/index.html.twig', array(
+            'articles' => $articles,
+        ));
+
     }
 }
-

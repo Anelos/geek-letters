@@ -114,7 +114,7 @@
     <parameter key="database_port">null</parameter>
     <parameter key="database_name">geek_letters</parameter>
     <parameter key="database_user">root</parameter>
-    <parameter key="database_password">angelus</parameter>
+    <parameter key="database_password">kissman</parameter>
     <parameter key="mailer_transport">smtp</parameter>
     <parameter key="mailer_host">127.0.0.1</parameter>
     <parameter key="mailer_user">null</parameter>
@@ -445,7 +445,7 @@
     <parameter key="assetic.write_to">/var/www/html/geek-letters/app/../web</parameter>
     <parameter key="assetic.variables" type="collection"/>
     <parameter key="assetic.java.bin">/usr/bin/java</parameter>
-    <parameter key="assetic.node.bin">/home/deliance/.nvm/versions/node/v7.10.0/bin/node</parameter>
+    <parameter key="assetic.node.bin">/usr/bin/node</parameter>
     <parameter key="assetic.ruby.bin">/usr/bin/ruby</parameter>
     <parameter key="assetic.sass.bin">/usr/local/bin/sass</parameter>
     <parameter key="assetic.reactjsx.bin">/usr/bin/jsx</parameter>
@@ -747,7 +747,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>OjTha6CrHvmA6gE8aANNuq</argument>
+      <argument>YhgIJlcNgo+iFf6wWHwqJ9</argument>
       <argument>/var/www/html/geek-letters/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -757,7 +757,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>OjTha6CrHvmA6gE8aANNuq</argument>
+      <argument>YhgIJlcNgo+iFf6wWHwqJ9</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -2390,12 +2390,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5938148bf10100.21892268</argument>
+      <argument>593865f6d76001.29375882</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5938148bf10100.21892268</argument>
+      <argument>593865f6d76001.29375882</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3037,7 +3037,7 @@
         <argument key="port">null</argument>
         <argument key="dbname">geek_letters</argument>
         <argument key="user">root</argument>
-        <argument key="password">angelus</argument>
+        <argument key="password">kissman</argument>
         <argument key="charset">UTF8</argument>
         <argument key="driverOptions" type="collection"/>
         <argument key="defaultTableOptions" type="collection"/>
@@ -4558,7 +4558,7 @@
     <service id="cache.system.recorder.inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>xUIuhYPJEF</argument>
       <argument>0</argument>
-      <argument>OjTha6CrHvmA6gE8aANNuq</argument>
+      <argument>YhgIJlcNgo+iFf6wWHwqJ9</argument>
       <argument>/var/www/html/geek-letters/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4566,7 +4566,7 @@
     <service id="cache.validator.recorder.inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>Las2jKfCr5</argument>
       <argument>0</argument>
-      <argument>OjTha6CrHvmA6gE8aANNuq</argument>
+      <argument>YhgIJlcNgo+iFf6wWHwqJ9</argument>
       <argument>/var/www/html/geek-letters/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4574,7 +4574,7 @@
     <service id="cache.serializer.recorder.inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>XKwxcFeiZu</argument>
       <argument>0</argument>
-      <argument>OjTha6CrHvmA6gE8aANNuq</argument>
+      <argument>YhgIJlcNgo+iFf6wWHwqJ9</argument>
       <argument>/var/www/html/geek-letters/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4582,7 +4582,7 @@
     <service id="cache.annotations.recorder.inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>r0jfJBpvQc</argument>
       <argument>0</argument>
-      <argument>OjTha6CrHvmA6gE8aANNuq</argument>
+      <argument>YhgIJlcNgo+iFf6wWHwqJ9</argument>
       <argument>/var/www/html/geek-letters/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
