@@ -1,6 +1,6 @@
 <?php
 
-/* article/index.html.twig */
+/* :article:index.html.twig */
 class __TwigTemplate_4f30739b6e146f5550659ac110bbbd002db4b1dcad7e9f03e3ab974d5aeb0c07 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -16,29 +16,29 @@ class __TwigTemplate_4f30739b6e146f5550659ac110bbbd002db4b1dcad7e9f03e3ab974d5ae
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1b4d8d2fe456e864a43eca95ba5e3e329e0225fe535277015342fd72fb88fa70 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_1b4d8d2fe456e864a43eca95ba5e3e329e0225fe535277015342fd72fb88fa70->enter($__internal_1b4d8d2fe456e864a43eca95ba5e3e329e0225fe535277015342fd72fb88fa70_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "article/index.html.twig"));
+        $__internal_5648221f7ffa8ce6e654c00708bd9642181205bc5c11a52f72aa80e06a395320 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_5648221f7ffa8ce6e654c00708bd9642181205bc5c11a52f72aa80e06a395320->enter($__internal_5648221f7ffa8ce6e654c00708bd9642181205bc5c11a52f72aa80e06a395320_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:index.html.twig"));
 
-        $__internal_d1dd66a9d469dbca1c3325a08af5cd911a55ce39953ec61d45824fb550db4948 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d1dd66a9d469dbca1c3325a08af5cd911a55ce39953ec61d45824fb550db4948->enter($__internal_d1dd66a9d469dbca1c3325a08af5cd911a55ce39953ec61d45824fb550db4948_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "article/index.html.twig"));
+        $__internal_25df54bab83b1cddbd4677d038cb965fca5763d9017f3f2f9c5824ff74fcbd94 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_25df54bab83b1cddbd4677d038cb965fca5763d9017f3f2f9c5824ff74fcbd94->enter($__internal_25df54bab83b1cddbd4677d038cb965fca5763d9017f3f2f9c5824ff74fcbd94_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":article:index.html.twig"));
 
         // line 1
         $this->displayBlock('body', $context, $blocks);
         
-        $__internal_1b4d8d2fe456e864a43eca95ba5e3e329e0225fe535277015342fd72fb88fa70->leave($__internal_1b4d8d2fe456e864a43eca95ba5e3e329e0225fe535277015342fd72fb88fa70_prof);
+        $__internal_5648221f7ffa8ce6e654c00708bd9642181205bc5c11a52f72aa80e06a395320->leave($__internal_5648221f7ffa8ce6e654c00708bd9642181205bc5c11a52f72aa80e06a395320_prof);
 
         
-        $__internal_d1dd66a9d469dbca1c3325a08af5cd911a55ce39953ec61d45824fb550db4948->leave($__internal_d1dd66a9d469dbca1c3325a08af5cd911a55ce39953ec61d45824fb550db4948_prof);
+        $__internal_25df54bab83b1cddbd4677d038cb965fca5763d9017f3f2f9c5824ff74fcbd94->leave($__internal_25df54bab83b1cddbd4677d038cb965fca5763d9017f3f2f9c5824ff74fcbd94_prof);
 
     }
 
     public function block_body($context, array $blocks = array())
     {
-        $__internal_0e144dae7f1d47049cd951aef686506e5dbf772b945d82ffac788a82cb37d30b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_0e144dae7f1d47049cd951aef686506e5dbf772b945d82ffac788a82cb37d30b->enter($__internal_0e144dae7f1d47049cd951aef686506e5dbf772b945d82ffac788a82cb37d30b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_aa526a36dc2f205a259fa707b3069fd995437fc1ff71ff5292c070a89d768f4e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_aa526a36dc2f205a259fa707b3069fd995437fc1ff71ff5292c070a89d768f4e->enter($__internal_aa526a36dc2f205a259fa707b3069fd995437fc1ff71ff5292c070a89d768f4e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_43ef8813810ce22e4637788d2af772c66662b7a7b372feade6144e7d69c1e444 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_43ef8813810ce22e4637788d2af772c66662b7a7b372feade6144e7d69c1e444->enter($__internal_43ef8813810ce22e4637788d2af772c66662b7a7b372feade6144e7d69c1e444_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_fe5cfcffdbfd394a37214105e3567f1198ba3d198020facb856e45ffce455803 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_fe5cfcffdbfd394a37214105e3567f1198ba3d198020facb856e45ffce455803->enter($__internal_fe5cfcffdbfd394a37214105e3567f1198ba3d198020facb856e45ffce455803_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 2
         echo "        ";
@@ -172,16 +172,16 @@ class __TwigTemplate_4f30739b6e146f5550659ac110bbbd002db4b1dcad7e9f03e3ab974d5ae
   
 ";
         
-        $__internal_43ef8813810ce22e4637788d2af772c66662b7a7b372feade6144e7d69c1e444->leave($__internal_43ef8813810ce22e4637788d2af772c66662b7a7b372feade6144e7d69c1e444_prof);
+        $__internal_fe5cfcffdbfd394a37214105e3567f1198ba3d198020facb856e45ffce455803->leave($__internal_fe5cfcffdbfd394a37214105e3567f1198ba3d198020facb856e45ffce455803_prof);
 
         
-        $__internal_0e144dae7f1d47049cd951aef686506e5dbf772b945d82ffac788a82cb37d30b->leave($__internal_0e144dae7f1d47049cd951aef686506e5dbf772b945d82ffac788a82cb37d30b_prof);
+        $__internal_aa526a36dc2f205a259fa707b3069fd995437fc1ff71ff5292c070a89d768f4e->leave($__internal_aa526a36dc2f205a259fa707b3069fd995437fc1ff71ff5292c070a89d768f4e_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "article/index.html.twig";
+        return ":article:index.html.twig";
     }
 
     public function getDebugInfo()
@@ -256,6 +256,6 @@ class __TwigTemplate_4f30739b6e146f5550659ac110bbbd002db4b1dcad7e9f03e3ab974d5ae
 
   
 {% endblock %}
-", "article/index.html.twig", "/var/www/html/geek-letters/app/Resources/views/article/index.html.twig");
+", ":article:index.html.twig", "/var/www/html/geek-letters/app/Resources/views/article/index.html.twig");
     }
 }

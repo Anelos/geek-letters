@@ -1,6 +1,6 @@
 <?php
 
-/* includes/navbar.html.twig */
+/* :includes:navbar.html.twig */
 class __TwigTemplate_95d0715462819d6fd41c1266430173ea4931eb6847cc94894e46ac7dbf4d00d1 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -16,30 +16,30 @@ class __TwigTemplate_95d0715462819d6fd41c1266430173ea4931eb6847cc94894e46ac7dbf4
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_59ea35f256477be1e14941664eb3d74045599468ff9a59f90b7c1a06bdbaeb75 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_59ea35f256477be1e14941664eb3d74045599468ff9a59f90b7c1a06bdbaeb75->enter($__internal_59ea35f256477be1e14941664eb3d74045599468ff9a59f90b7c1a06bdbaeb75_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "includes/navbar.html.twig"));
+        $__internal_9239a86edbdf6da59e0f3087f9d57e735a798c2aa0084cbd42e6f98acc7ec2ca = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_9239a86edbdf6da59e0f3087f9d57e735a798c2aa0084cbd42e6f98acc7ec2ca->enter($__internal_9239a86edbdf6da59e0f3087f9d57e735a798c2aa0084cbd42e6f98acc7ec2ca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":includes:navbar.html.twig"));
 
-        $__internal_6ba6420bfbdb3bd6c67367e0056b4b04d2c0c9001369d8f3fcfe067197e89a7d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6ba6420bfbdb3bd6c67367e0056b4b04d2c0c9001369d8f3fcfe067197e89a7d->enter($__internal_6ba6420bfbdb3bd6c67367e0056b4b04d2c0c9001369d8f3fcfe067197e89a7d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "includes/navbar.html.twig"));
+        $__internal_b2b9e1a25e23e2e1dcb82d0e95b1c496d738d8b6a3361488f60a7a0364865fa7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b2b9e1a25e23e2e1dcb82d0e95b1c496d738d8b6a3361488f60a7a0364865fa7->enter($__internal_b2b9e1a25e23e2e1dcb82d0e95b1c496d738d8b6a3361488f60a7a0364865fa7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":includes:navbar.html.twig"));
 
         // line 1
         echo " ";
         $this->displayBlock('nav', $context, $blocks);
         
-        $__internal_59ea35f256477be1e14941664eb3d74045599468ff9a59f90b7c1a06bdbaeb75->leave($__internal_59ea35f256477be1e14941664eb3d74045599468ff9a59f90b7c1a06bdbaeb75_prof);
+        $__internal_9239a86edbdf6da59e0f3087f9d57e735a798c2aa0084cbd42e6f98acc7ec2ca->leave($__internal_9239a86edbdf6da59e0f3087f9d57e735a798c2aa0084cbd42e6f98acc7ec2ca_prof);
 
         
-        $__internal_6ba6420bfbdb3bd6c67367e0056b4b04d2c0c9001369d8f3fcfe067197e89a7d->leave($__internal_6ba6420bfbdb3bd6c67367e0056b4b04d2c0c9001369d8f3fcfe067197e89a7d_prof);
+        $__internal_b2b9e1a25e23e2e1dcb82d0e95b1c496d738d8b6a3361488f60a7a0364865fa7->leave($__internal_b2b9e1a25e23e2e1dcb82d0e95b1c496d738d8b6a3361488f60a7a0364865fa7_prof);
 
     }
 
     public function block_nav($context, array $blocks = array())
     {
-        $__internal_3dd9704491201b66b248f11422d1cb2a663cc2b99c3dd7633556c796c366e6bc = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_3dd9704491201b66b248f11422d1cb2a663cc2b99c3dd7633556c796c366e6bc->enter($__internal_3dd9704491201b66b248f11422d1cb2a663cc2b99c3dd7633556c796c366e6bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "nav"));
+        $__internal_c556ed98c17a4d2b3b8db6f76cc581f2de1bee96bb755dd560bb20b4418f4f93 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_c556ed98c17a4d2b3b8db6f76cc581f2de1bee96bb755dd560bb20b4418f4f93->enter($__internal_c556ed98c17a4d2b3b8db6f76cc581f2de1bee96bb755dd560bb20b4418f4f93_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "nav"));
 
-        $__internal_982314f536bdfc0bb680e07e43c925c0f64459af703fec3462883e623d13b2a5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_982314f536bdfc0bb680e07e43c925c0f64459af703fec3462883e623d13b2a5->enter($__internal_982314f536bdfc0bb680e07e43c925c0f64459af703fec3462883e623d13b2a5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "nav"));
+        $__internal_a696d217e7d3dbc62ea89f24d0db0f6c2dc2b5982997981b0b7ff170e323d34f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a696d217e7d3dbc62ea89f24d0db0f6c2dc2b5982997981b0b7ff170e323d34f->enter($__internal_a696d217e7d3dbc62ea89f24d0db0f6c2dc2b5982997981b0b7ff170e323d34f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "nav"));
 
         // line 2
         echo "<nav class=\"navbar navbar-default navbar-inverse\" role=\"navigation\">
@@ -99,16 +99,16 @@ class __TwigTemplate_95d0715462819d6fd41c1266430173ea4931eb6847cc94894e46ac7dbf4
 </nav>
 ";
         
-        $__internal_982314f536bdfc0bb680e07e43c925c0f64459af703fec3462883e623d13b2a5->leave($__internal_982314f536bdfc0bb680e07e43c925c0f64459af703fec3462883e623d13b2a5_prof);
+        $__internal_a696d217e7d3dbc62ea89f24d0db0f6c2dc2b5982997981b0b7ff170e323d34f->leave($__internal_a696d217e7d3dbc62ea89f24d0db0f6c2dc2b5982997981b0b7ff170e323d34f_prof);
 
         
-        $__internal_3dd9704491201b66b248f11422d1cb2a663cc2b99c3dd7633556c796c366e6bc->leave($__internal_3dd9704491201b66b248f11422d1cb2a663cc2b99c3dd7633556c796c366e6bc_prof);
+        $__internal_c556ed98c17a4d2b3b8db6f76cc581f2de1bee96bb755dd560bb20b4418f4f93->leave($__internal_c556ed98c17a4d2b3b8db6f76cc581f2de1bee96bb755dd560bb20b4418f4f93_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "includes/navbar.html.twig";
+        return ":includes:navbar.html.twig";
     }
 
     public function getDebugInfo()
@@ -165,6 +165,6 @@ class __TwigTemplate_95d0715462819d6fd41c1266430173ea4931eb6847cc94894e46ac7dbf4
   <!-- /.container-fluid -->
 </nav>
 {% endblock %}
-", "includes/navbar.html.twig", "/var/www/html/geek-letters/app/Resources/views/includes/navbar.html.twig");
+", ":includes:navbar.html.twig", "/var/www/html/geek-letters/app/Resources/views/includes/navbar.html.twig");
     }
 }
