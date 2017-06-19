@@ -1,0 +1,191 @@
+body,
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes example {
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: #207e82;
+    }
+}
+
+@font-face {
+    font-family: 'geek';
+    src: url("../fonts/OptimusPrinceps.ttf");
+}
+
+.navbar {
+    margin: 0;
+    border-radius: 0;
+    background-color: #040114;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    font-family: "geek";
+    width: 100%;
+    height: 400px;
+    color: white;
+    background-image: url("../img/pacman.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.header h3 {
+    margin-top: 2%;
+}
+
+.main {
+    margin-bottom: 3%;
+}
+
+.footer {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer li {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.well {
+    margin-bottom: 0px;
+}
+
+.comments {
+    margin-bottom: 3%;
+}
+
+.btn {
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+.line-1 {
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+
+/* Animation */
+
+.anim-typewriter {
+    animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 24em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, 0);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.article {
+    margin-top: 4%;
+}
+
+.edit {
+    margin-left: 10%;
+    text-align: justify;
+}
+
+.gras {
+    font-weight: bold;
+}
+
+.notPubished .well {
+    background-color: rgba(255, 108, 108, 0.8);
+}
+
+.notPubished .well span {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .categorie {
+        display: none;
+    }
+    .line-1 {
+        display: none;
+    }
+}
+
+.user th,
+.user tr {
+    border: 1px solid black;
+}
+
+.user li {
+    list-style-type: none;
+}
+
+#appbundle_article_title {
+    margin-left: 5%;
+}
+
+#appbundle_article_content {
+    margin-left: 2%;
+}
+
+#appbundle_article_category {
+    margin-left: 1%;
+}
+
+.inputEdit {
+    margin-left: 6%;
+}
+
+.inputDelete {
+    margin-left: 6%;
+}
+
+#scrollTop {
+    z-index: 5;
+    bottom: 10%;
+    position: fixed;
+}
+
+
+/*# sourceMappingURL=style.css.map */

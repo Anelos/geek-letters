@@ -1,0 +1,9 @@
+{% block body %}
+    <h1>Categories list</h1>
+        <ul>
+        <li><a href="{{ path('homepage') }}">All</a></li>
+        {% for category in categories %}
+                <li><a href="{{ path('homepage', {'category': category.id}) }}">{{ category.designation }}</a></li>
+        {% endfor %}
+        </ul>
+{% endblock %}
